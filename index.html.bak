@@ -51,7 +51,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 	<div class="header">
-		<div class="imgHeader"><img src="motLogo.png" style="float:right;"/></div>
+		<div class="imgHeader"><img src="assets/Owl_Avatar.png" style="float:right; height: 166px;width: 156px;"/></div>
 		<div class="paraHeader"><h1 style="float:left;padding-top: 1em;font-size: 50px;">MOTS Guide Pages</h1></div>			
 	</div>
 		
