@@ -19,7 +19,7 @@ body{
 	width: 200px;
 	font-weight: bold;
 	text-align: center;
-	background-color: rgb(176, 64, 38)!important;
+	background-color: red!important;
 	padding-top: 80px!important;
 	font-size: 20px;
 }
