@@ -19,19 +19,19 @@ body{
 	width: 200px;
 	font-weight: bold;
 	text-align: center;
-	background-color: red!important;
+	background-color: rgb(176, 64, 38)!important;
 	padding-top: 80px!important;
 	font-size: 20px;
 }
 .headerImage{
-	height:200px; 
-	margin-left:-15px; 
-	float:right;
+	height: 100px;
+    margin-left: -15px;
+    float: right;
 }
 .headerText{
 	float:left;
-	padding-top: 80px;
 	color:white;
+	font-size: 60px;
 }
 @media (max-width: 1000px) {
 	.well{

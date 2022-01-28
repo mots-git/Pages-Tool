@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>MOTS Guide Pages</title>
+      <title>MOTS Pages Guide</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -17,14 +17,17 @@
             </div>
             <div class="col-md-6">
                <h2 class="headerText">
-               MOTS Guide Pages
+               MOTS Pages Guide
                </h2>
             </div>
          </div>
          <div class = "mainBody">
-		 <h4>Welcome to the MOTS guide on pages, this guides purpose is to help you through your pages journey with your client.</h4>
-		 <h4>The tool will go through the various cases and explain the process that you and your client need to go through for support. The toll will then help provide the details you will need to submit for a MOTs case if needed.</h4>
-            <div class="row">
+		 <br>
+		 <div class="textBody">
+			<h4>Welcome to the MOTS guide on pages, this guides purpose is to help you through your pages journey with your client.</h4>
+			<h4>The tool will go through the various cases and explain the process that you and your client need to go through for support. The toll will then help provide the details you will need to submit for a MOTs case if needed.</h4>
+         </div>   
+			<div class="row">
                <div class="col-md-3 col-md-offset-2">
                   <div class="well">Covert Page Type</div>
                </div>
