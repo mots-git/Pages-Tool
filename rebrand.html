@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rebrand</title>
+</head>
+<body>
+
+	<style type="text/css">
+
+body {background-color: #00639e;}
+		
+.btn{background-color: #b04026;
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #b04026;
+  border: none;
+  border-radius: 15px;
+
+
+ 
+
+  	
+}
+
+ #p {color: red;}
+
+.btn:hover {
+  background-color: #E65837;
+}
+
+#lvl_2,#lvl_3,#lvl_4,#lvl_results{
+display: none;
+}
+
+#results{display: block; margin-top: 16px; width: 20%; font-size: 30px; border-style: solid; border-width: 5px;}
+#back{font-size: 30px;}
+
+</style>
+
+<div id="back">
+	<button class="btn" style='font-size:50px;' onclick="reduce_x()">&cularr;</button>
+</div>
+<div id="lvl_1"> 
+	<h1 id="q1">How many employees does the page have?</h1>
+    <button class="btn" id="level1" onclick="logic_fun(),add_results_Level1(this)" > More than 500 </button>
+    <button class="btn" id="level1" onclick="logic_fun(),add_results_Level1(this)" > Less than 500</button>
+</div>
+<div id="lvl_2">
+	<h1 id="q2">Severity of change?</h1>
+    <button class="btn" id="level2" onclick="logic_fun(),add_results_Level2(this)" > Significant change</button>
+    <button class="btn" id="level2" onclick="logic_fun(),add_results_Level2(this)" > Minor change</button>
+</div>
+<div id="lvl_3">
+	<h1 id="q3">How old is the page?</h1>
+    <button class="btn" id="level3" onclick="logic_fun(),add_results_Level3(this)" > More than a year old</button>
+    <button class="btn" id="level3" onclick="logic_fun(),add_results_Level3(this)" > Less than a year old</button>
+</div>
+<div id="lvl_4">
+	<br>
+	<h1>your company URL </h1>
+	<input type="text" name="URL">
+</div>
+
+<div id="lvl_results">
+	<p>these are your results</p>
+	<p id="results">Rebrand</p>
+	<button class="btn" id="open_case" onclick="location.href='https://lnkd.in/gb679H8F';" > Open case to MOTs</button>
+	<!-- The button used to copy the text -->
+	<button class="btn" style='font-size:80px;' onclick="copyFunction()" >&#128203;</button>
+	<!-- The text field -->
+</div>
+
+
+
+<script type="text/javascript">
+	
+var x=0;
+var resultsDiv=document.getElementById("results");
+var resultsLevel1Div=document.getElementById("level1");
+var resultsLevel2Div=document.getElementById("level2");
+var resultsLevel3Div=document.getElementById("level3");
+var level1Result = "";
+var level2Result = "";
+var level3Result = "";
+
+function copyFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("results").innerHTML;
+  
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText);
+
+  /* Alert the copied text */
+  alert("Copied text: " + copyText);
+}
+
+function add_results_Level1(o) {
+	level1Result = o.innerHTML;
+	console.log(resultsLevel1Div.innerHTML);
+}
+function add_results_Level2(o) {
+	level2Result = o.innerHTML;
+	console.log(resultsLevel2Div.innerHTML);
+}
+function add_results_Level3(o) {
+	level3Result = o.innerHTML;
+	document.getElementById("results").innerHTML = level1Result + "\n" + level2Result + "\n" + level3Result;
+	console.log(resultsLevel3Div.innerHTML);
+}
+
+function switch_fun(){
+	switch(x){
+		case 0:
+    	// code block
+    	document.getElementById("lvl_1").style.display="inline";
+    	document.getElementById("lvl_2").style.display="none";
+    	document.getElementById("lvl_3").style.display="none";
+    	document.getElementById("lvl_4").style.display="none";
+    	document.getElementById("lvl_results").style.display="none";
+    	console.log(x);
+    	break;
+  		case 1:
+    	// code block
+    	document.getElementById("lvl_1").style.display="none";
+    	document.getElementById("lvl_2").style.display="inline";
+    	document.getElementById("lvl_3").style.display="none";
+    	document.getElementById("lvl_4").style.display="none";
+    	document.getElementById("lvl_results").style.display="none";
+    	console.log(x);
+    	break;
+  		case 2:
+    	// code block
+    	document.getElementById("lvl_1").style.display="none";
+    	document.getElementById("lvl_2").style.display="none";
+    	document.getElementById("lvl_3").style.display="inline";
+    	document.getElementById("lvl_4").style.display="inline";
+    	document.getElementById("lvl_results").style.display="none";
+    	console.log(x);
+    	break;
+    	case 3:
+    	// code block
+		document.getElementById("lvl_1").style.display="none";
+    	document.getElementById("lvl_2").style.display="none";
+    	document.getElementById("lvl_3").style.display="none";
+    	document.getElementById("lvl_results").style.display="inline";
+		console.log(x);
+	}
+}
+
+function logic_fun() {
+	x+=1;
+	switch_fun();
+}
+
+function reduce_x(){
+	if (x>0){
+		x-=1;
+		switch_fun();}
+}
+</script>
+
+</body>
+</html>
