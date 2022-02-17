@@ -12,7 +12,7 @@ body{
 .col-md-3{
 	margin-top: 10px;
 }
-.well{
+.well, .well-openMotsCase{
 	border-radius: 35%!important;
 	color: #fff!important;
 	height: 140px;
@@ -26,6 +26,21 @@ body{
 	cursor: pointer;
 	box-shadow: 0 3px 10px rgb(0 0 0 / 58%);
 }
+.well-openMotsCase{
+	border-radius: 15%!important;
+	height: 70px;
+	width: 200px;
+	margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+	padding-top: 20px!important;
+}
+#assets-copy-image{
+	width: 35px;
+    margin-top: 78px;
+    float: left;
+    margin-left: 10px;
+}
 .headerImage{
 	height: 100px;
     margin-left: -15px;
@@ -36,10 +51,30 @@ body{
 	color:white;
 	font-size: 60px;
 }
-.textBody{
+.textBody, #lvl_1, #lvl_2, #lvl_3, #lvl_4{
 	width: 90%;
-    padding-left: 18%;
+    padding-left: 23%;
     text-align: left;
+}
+#textResultsDisplay{
+border: 1px black solid;
+    width: 30%;
+	left: 35%;
+    margin: auto;
+	
+}
+#displayText{
+	width: 30%;
+}
+#resultsImage{
+	float: right;
+}
+#q1, #q2, #q3, #q4, #resultText{
+	text-align: center;
+	margin-right: 100px;
+}
+#level1, #level2, #level3, #level4{
+	margin-left: 50px;
 }
 #twoblocks{
 	padding-left: 72px;
