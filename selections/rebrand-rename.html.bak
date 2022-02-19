@@ -7,7 +7,6 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="../styles.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    </head>
    <body>
       <div class="container text-center">
@@ -28,24 +27,31 @@
 				<div id="back" class="col-md-3">
 					<button class="btn" style='font-size:50px;' onclick="reduce_x()">&cularr;</button>
 				</div>
-				<button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" > More than 500 </button>
-				<button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" > Less than 500</button>
+				<div id="options">
+					<button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" > More than 500 </button>
+					<button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" > Less than 500</button>
+				</div>
 			</div>
 			<div id="lvl_2">
 				<h4 id="q2">Severity of change?</h4>
 				<div id="back" class="col-md-3">
 					<button class="btn" style='font-size:50px;' onclick="reduce_x()">&cularr;</button>
 				</div>
-				<button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" > Significant change</button>
-				<button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" > Minor change</button>
+				<div id="options">
+					<button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" > Significant change</button>
+					<button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" > Minor change</button>
+				</div>
 			</div>
 			<div id="lvl_3">
 				<h4 id="q3">How old is the page?</h4>
 				<div id="back" class="col-md-3">
 					<button class="btn" style='font-size:50px;' onclick="reduce_x()">&cularr;</button>
 				</div>
-				<button class="well" id="level3" onclick="logic_fun(),add_results_Level3(this)" > More than a year old</button>
-				<button class="well" id="level3" onclick="logic_fun(),add_results_Level3(this)" > Less than a year old</button>
+				<div id="options">
+					<button class="well" id="level3" onclick="logic_fun(),add_results_Level3(this)" > More than a year old</button>
+					<button class="well" id="level3" onclick="logic_fun(),add_results_Level3(this)" > Less than a year old</button>
+					<button class="well" id="level3" onclick="logic_fun(),add_results_Level3(this)" > I don't know</button>
+				</div>
 			</div>
 			
 				   <div id="lvl_results_yes">
@@ -166,17 +172,75 @@ function add_results_Level3(o) {
 	document.getElementById("level1-results-no").innerHTML = "Number of Employees: " + level1Result;
 	document.getElementById("level2-results-no").innerHTML = "Severity of Change: " + level2Result;
 	document.getElementById("level3-results-no").innerHTML = "Age of Plan: " + level3Result;
-	
 	console.log("true results" + level1Result + level2Result + level3Result)
 			
 	console.log("display function"+resultsLevel3Div.innerHTML);
 	if(level1Result.includes("More than 500") &&
-			level2Result.includes("Significant change") &&
-			level3Result.includes("Less than a year old")){
-			changeResult = true;
+		level2Result.includes("Significant change") &&
+		level3Result.includes("Less than a year old")){
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
-		}
+	}
+	else if(level1Result.includes("More than 500") &&
+		level2Result.includes("Significant change") &&
+		level3Result.includes("More than a year old")){
+			document.getElementById("lvl_results_no").style.display="block";
+			document.getElementById("lvl_results_yes").style.display="none";
+	}
+	else if(level1Result.includes("Less than 500") &&
+		level2Result.includes("Minor change") &&
+		level3Result.includes("Less than a year old")){
+			document.getElementById("lvl_results_no").style.display="none";
+			document.getElementById("lvl_results_yes").style.display="block";
+	}
+	else if(level1Result.includes("Less than 500") &&
+		level2Result.includes("Minor change") &&
+		level3Result.includes("More than a year old")){
+			document.getElementById("lvl_results_no").style.display="none";
+			document.getElementById("lvl_results_yes").style.display="block";
+	}
+	else if(level1Result.includes("More than 500") &&
+		level2Result.includes("Minor change") &&
+		level3Result.includes("Less than a year old")){
+			document.getElementById("lvl_results_no").style.display="none";
+			document.getElementById("lvl_results_yes").style.display="block";
+	}
+	else if(level1Result.includes("Less than 500") &&
+		level2Result.includes("Significant change") &&
+		level3Result.includes("Less than a year old")){
+			document.getElementById("lvl_results_no").style.display="none";
+			document.getElementById("lvl_results_yes").style.display="block";
+	}
+	else if(level1Result.includes("Less than 500") &&
+		level2Result.includes("Significant change") &&
+		level3Result.includes("More than a year old")){
+			document.getElementById("lvl_results_no").style.display="none";
+			document.getElementById("lvl_results_yes").style.display="block";
+	}
+	else if(level1Result.includes("More than 500") &&
+		level2Result.includes("Significant change") &&
+		level3Result.includes("I don't know")){
+			document.getElementById("lvl_results_no").style.display="block";
+			document.getElementById("lvl_results_yes").style.display="none";
+	}
+	else if(level1Result.includes("More than 500") &&
+		level2Result.includes("Minor change") &&
+		level3Result.includes("I don't know")){
+			document.getElementById("lvl_results_no").style.display="none";
+			document.getElementById("lvl_results_yes").style.display="block";
+	}
+	else if(level1Result.includes("Less than 500") &&
+		level2Result.includes("Minor change") &&
+		level3Result.includes("I don't know")){
+			document.getElementById("lvl_results_no").style.display="none";
+			document.getElementById("lvl_results_yes").style.display="block";
+	}
+	else if(level1Result.includes("Less than 500") &&
+		level2Result.includes("Significant change") &&
+		level3Result.includes("I don't know")){
+			document.getElementById("lvl_results_no").style.display="none";
+			document.getElementById("lvl_results_yes").style.display="block";
+	}
 }
 
 function switch_fun(){

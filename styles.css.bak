@@ -12,6 +12,19 @@ body{
 .col-md-3{
 	margin-top: 10px;
 }
+.titleBox{
+	color: #fff!important;
+    height: 100px;
+    width: 100px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 33px!important;
+    padding: 0px;
+    font-size: 20px;
+    cursor: pointer;
+	float: right;
+    background-color: rgb(0, 99, 158)!important;
+}
 .well, .well-openMotsCase{
 	border-radius: 35%!important;
 	color: #fff!important;
@@ -25,6 +38,9 @@ body{
 	font-size: 20px;
 	cursor: pointer;
 	box-shadow: 0 3px 10px rgb(0 0 0 / 58%);
+}
+.arrowImage{
+	cursor: pointer;
 }
 .well-openMotsCase{
 	border-radius: 15%!important;
@@ -56,6 +72,10 @@ body{
     padding-left: 23%;
     text-align: left;
 }
+.titleTextBody{
+    text-align: left;
+	margin-top: 5%;
+}
 #textResultsDisplay{
 border: 1px black solid;
     width: 30%;
@@ -71,7 +91,7 @@ border: 1px black solid;
 }
 #q1, #q2, #q3, #q4, #resultText{
 	text-align: center;
-	margin-right: 180px;
+	margin-right: 200px;
 }
 #level1, #level2, #level3, #level4{
 	margin-left: 50px;

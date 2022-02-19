@@ -5,9 +5,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="../styles.css">
+      <link rel="stylesheet" href="styles.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    </head>
    <body>
       <div class="container text-center">
@@ -27,30 +26,92 @@
 			<h4>Welcome to the MOTS guide on pages, this guides purpose is to help you through your pages journey with your client.</h4>
 			<h4>The tool will go through the various cases and explain the process that you and your client need to go through for support.</h4>
 			<h4>The tool will then help provide the details you will need to submit for a MOTs case if needed.</h4>
-		 </div>   
-			<div class="row">
-               <div class="col-md-3 col-md-offset-3">
-                  <div class="well" onclick="location.href='#';" style="padding-top: 45px!important;">Consolidation / Merge</div>
-               </div>
-               <div class="col-md-3">
-                  <div class="well" onclick="location.href='#';">Acquisition</div>
-               </div>
-               <div class="col-md-3">
-                  <div class="well" onclick="location.href='#';" style="padding-top: 45px!important;">Migrate followers</div>
-               </div>
-            </div>
-			<div class="row">
-               <div class="col-md-3 col-md-offset-3">
-                  <div class="well" onclick="location.href='selections/rebrand-rename.html';" style="padding-top: 45px!important;">Rebrand / Rename</div>
-               </div>
-               <div class="col-md-3">
-                  <div class="well" onclick="location.href='#';">Edit Post</div>
-               </div>
-               <div class="col-md-3">
-                  <div class="well" onclick="location.href='#';">Other</div>
-               </div>
-            </div>
+		 </div> 
+			<div id="page1">
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-3">
+					  <div class="well" onclick="location.href='#';" style="padding-top: 45px!important;">Consolidation / Merge</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';">Acquisition</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';" style="padding-top: 45px!important;">Migrate followers</div>
+				   </div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-md-offset-9">
+					  <div onclick="showPage2Function()"><img class="arrowImage" src="assets/ForwardButton.png" /></div>
+				   </div>
+				</div>
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-3">
+					  <div class="well" onclick="location.href='selections/rebrand-rename.html';" style="padding-top: 45px!important;">Rebrand / Rename</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';">Edit Post</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='slections/faqs.html';">FAQ</div>
+				   </div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-md-offset-9">
+					  <p>1/2</p>
+				   </div>
+				</div>
+			</div>
+			<div id="page2">
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-3">
+					  <div class="well" onclick="location.href='#';" style="padding-top: 45px!important;">Convert Page Type</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';">Affiliations</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';" style="padding-top: 45px!important;">Add/Remove Admin</div>
+				   </div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-md-offset-1">
+					  <div onclick="showPage1Function()"><img class="arrowImage" src="assets/backButton.png" /></div>
+				   </div>
+				</div>
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-3">
+					  <div class="well" onclick="location.href='selections/rebrand-rename.html';" style="padding-top: 45px!important;">Claim / Deactivate Page</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';">De-Affiliation</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';" style="padding-top: 45px!important;">Vanity URL Changes</div>
+				   </div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-md-offset-9">
+					  <p>2/2</p>
+				   </div>
+				</div>
+			</div>
          </div>
       </div>
+	  <script>
+		$(document).ready(function() { 
+	
+			document.getElementById("page1").style.display="inline";
+			document.getElementById("page2").style.display="none";
+
+		});
+		function showPage1Function(){
+			document.getElementById("page1").style.display="inline";
+			document.getElementById("page2").style.display="none";
+		}
+		function showPage2Function(){
+			document.getElementById("page1").style.display="none";
+			document.getElementById("page2").style.display="inline";
+		}
+	  </script>
    </body>
 </html>
