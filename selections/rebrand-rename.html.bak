@@ -129,14 +129,12 @@
          <br>
       </div>
       <script type="text/javascript">
-         $(document).ready(function() { 
-         
+         $(document).ready(function() {          
 			 document.getElementById("lvl_1").style.display="block";
 			 document.getElementById("lvl_2").style.display="none";
 			 document.getElementById("lvl_3").style.display="none";
 			 document.getElementById("lvl_results_yes").style.display="none";
-			 document.getElementById("lvl_results_no").style.display="none";
-         
+			 document.getElementById("lvl_results_no").style.display="none";         
          });
       </script>
    </body>

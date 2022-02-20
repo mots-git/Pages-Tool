@@ -80,7 +80,7 @@
 				</div>
 				<div class="row">
 				   <div class="col-md-3 col-md-offset-3">
-					  <div class="well" onclick="location.href='selections/claim-deactivate.html';" style="padding-top: 45px!important;">Claim / Deactivate Page</div>
+					  <div class="well" onclick="location.href='selections/rebrand-rename.html';" style="padding-top: 45px!important;">Claim / Deactivate Page</div>
 				   </div>
 				   <div class="col-md-3">
 					  <div class="well" onclick="location.href='#';">De-Affiliation</div>
