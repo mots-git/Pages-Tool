@@ -55,10 +55,6 @@ body{
     float: left;
     margin-left: 20px;
 }
-#pageText{
-	float:left; 
-	margin-left:-20px;
-}
 .headerImage{
 	height: 100px;
     margin-left: -15px;

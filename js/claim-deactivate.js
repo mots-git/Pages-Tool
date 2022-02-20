@@ -10,11 +10,12 @@ function add_results_Level1(o) {
 	level1Result = o.innerHTML;
 	if(level1Result.includes("Claim")){
 		document.getElementById("level1-results-yes").innerHTML = "Solution: " + "Self Service";
-		document.getElementById("level2-results-yes").style.display="none";
+		document.getElementById("level2-results-yes").style.display="none";		
 		document.getElementById("lvl_results_no").style.display="none";
 		document.getElementById("lvl_results_yes").style.display="block";
 		document.getElementById("lvl_2").style.display="none";
 		document.getElementById("resultReason-yes").innerHTML = "Self service solution";
+		document.getElementById("assets-copy-image-yes").style.marginTop="18px";
 	}
 }
 function add_results_Level2(o) {
@@ -26,13 +27,15 @@ function add_results_Level2(o) {
 			document.getElementById("lvl_results_yes").style.display="none";
 			document.getElementById("lvl_results_no").style.display="block";			
 			document.getElementById("resultReason-no").innerHTML = "No please read the following link ";
+			document.getElementById("assets-copy-image-no").style.marginTop="48px";
 		}
 		else if(level2Result.includes("Less than 100")){
 			document.getElementById("level1-results-yes").innerHTML = "Employees: " + level1Result;
 			document.getElementById("level2-results-yes").innerHTML = "Solution: " + "Self Service";
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
-			document.getElementById("resultReason").innerHTML = "No please read the following link";
+			document.getElementById("resultReason-yes").innerHTML = "Self Service Solution";
+			document.getElementById("assets-copy-image-yes").style.marginTop="48px";
 		}
 	}
 }

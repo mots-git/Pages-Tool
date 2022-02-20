@@ -31,11 +31,11 @@
          <div id="lvl_1">
             <h4 id="q1">What would you like to do with your page?</h4>
             <div id="back" class="col-md-3">
-               <div onclick="reduce_x()"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
+               <div onclick="location.href='../index.html';"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
             </div>
             <div id="options">
-               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" > Deactivate </button>
-               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" > Claim </button>
+               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 15px!important;"> Deactivate </button>
+               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 15px!important;"> Claim </button>
             </div>
          </div>
          <div id="lvl_2">
@@ -44,8 +44,8 @@
                <div onclick="reduce_x()"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
             </div>
             <div id="options">
-               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" > More than 100 </button>
-               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" > Less than 100 </button>
+               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> More than 100 </button>
+               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> Less than 100 </button>
             </div>
          </div>
          <div id="lvl_results_yes">
@@ -68,7 +68,7 @@
                   <!--
                      <button class="btn" style='font-size:80px;' onclick="copyFunction()" >&#128203;</button>
                      -->
-                  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image"/></div>
+                  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-yes"/></div>
                </div>
             </div>
             <div class="row">
@@ -85,8 +85,8 @@
                </div>
                <div class="col-md-3" id="displayText">
                   <h4>It is <b>unlikely</b> that this change can be processed at this moment</h4>
-                  <h4 id = "resultReason-no">But please feel free to copy the below into a case to MOTs</h4><a href = 'https://docs.google.com/document/d/12l9adFgT1K6TmLauU8i7n5P1IWx2ZqEXh79GGp_iPuw/edit#heading=h.ov7zcjv3fpoy' style="font-size:18px;"> here </a>
-				  
+                  <h4 id = "resultReason-no">But please feel free to copy the below into a case to MOTs</h4>
+				  <a href = 'https://docs.google.com/document/d/12l9adFgT1K6TmLauU8i7n5P1IWx2ZqEXh79GGp_iPuw/edit#heading=h.ov7zcjv3fpoy' style="font-size:18px;"> here </a>
                </div>
             </div>
             <div class="row">
@@ -99,7 +99,7 @@
                   <!--
                      <button class="btn" style='font-size:80px;' onclick="copyFunction()" >&#128203;</button>
                      -->
-                  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image"/></div>
+                  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-no"/></div>
                </div>
             </div>
             <div class="row">
