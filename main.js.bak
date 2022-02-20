@@ -174,7 +174,7 @@ function reduce_x(){
 let saveFile = () => {
         // This variable stores all the data.
         let data = 
-			'Request Type: Rebrand' + ' \r\n ' + 
+			'Request Type: Rebrand: ' + ' \r\n ' + 
             'Number of Employees: ' + level1Result + ' \r\n ' + 
             'Severity of Change: ' +level2Result + ' \r\n ' + 
             'Age of Plan: ' + level3Result;
