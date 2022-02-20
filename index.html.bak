@@ -57,7 +57,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6 col-md-offset-6">
-					  <p style="float:left; margin-left:-20px;">1/2</p>
+					  <p id="pageText">1/2</p>
 				   </div>
 				</div>
 			</div>
@@ -91,7 +91,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6 col-md-offset-6">
-					  <p style="float:left; margin-left:-20px;">2/2</p>
+					  <p id="pageText">2/2</p>
 				   </div>
 				</div>
 			</div>
