@@ -94,11 +94,13 @@ function reduce_x(){
 let saveFile = () => {
         // This variable stores all the data.
 		let data;
+		var solution;
 		
 		if(level1Result.includes("Claim")){
 			data = 
 				'Request Type: Claim' + ' \r\n ' + 
 				'Solution: ' + "Self Service";
+				solution = "Solution: Self Service";
 		}
 		else if(level1Result.includes("Deactivate")){
 			if(level2Result.includes("More than 100")){
@@ -106,12 +108,14 @@ let saveFile = () => {
 					'Request Type: Deactivate' + ' \r\n ' + 
 					'Number of Employees: ' + level2Result + ' \r\n ' + 
 					'Solution: ' + "Not possible please see documentation";
+					solution = "Solution: Not possible please see documentation";
 			}
 			else{
 				data = 
 					'Request Type: Deactivate' + ' \r\n ' +
 					'Number of Employees: ' + level2Result + ' \r\n ' + 					
 					'Solution: ' + "Self Service";
+					solution = "Solution: Self Service";
 			}
 		}
         
@@ -134,7 +138,7 @@ let saveFile = () => {
         newLink.click();
 
 		/* Get the text field */
-		var resultsText = level1Result + " " + level2Result;
+		var resultsText = level1Result + " " + level2Result + solution;
 		  
 		   /* Copy the text inside the text field */
 		  navigator.clipboard.writeText(resultsText);

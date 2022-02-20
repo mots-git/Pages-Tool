@@ -134,7 +134,7 @@ let saveFile = () => {
         newLink.click();
 
 		/* Get the text field */
-		var resultsText = level1Result + " " + level2Result + " " + level3Result;
+		var resultsText = level1Result + " " + level2Result;
 		  
 		   /* Copy the text inside the text field */
 		  navigator.clipboard.writeText(resultsText);
