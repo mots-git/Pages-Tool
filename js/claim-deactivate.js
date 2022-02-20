@@ -100,7 +100,7 @@ let saveFile = () => {
 			data = 
 				'Request Type: Claim' + ' \r\n ' + 
 				'Solution: ' + "Self Service";
-				solution = "Solution: Self Service";
+				solution = "Self Service";
 		}
 		else if(level1Result.includes("Deactivate")){
 			if(level2Result.includes("More than 100")){
@@ -108,14 +108,14 @@ let saveFile = () => {
 					'Request Type: Deactivate' + ' \r\n ' + 
 					'Number of Employees: ' + level2Result + ' \r\n ' + 
 					'Solution: ' + "Not possible please see documentation";
-					solution = "Solution: Not possible please see documentation";
+					solution = "Not possible please see documentation";
 			}
 			else{
 				data = 
 					'Request Type: Deactivate' + ' \r\n ' +
 					'Number of Employees: ' + level2Result + ' \r\n ' + 					
 					'Solution: ' + "Self Service";
-					solution = "Solution: Self Service";
+					solution = "Self Service";
 			}
 		}
         
