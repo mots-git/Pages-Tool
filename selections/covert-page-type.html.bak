@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>MOTS Pages Guide</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../styles.css">
+	  <script src="../js/covert-page-type.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <div class="container text-center">
+         <div class="row">
+            <div class="col-md-4">
+               <img class="headerImage" src="../assets/Owl_Avatar.png" />
+            </div>
+            <div class="col-md-6">
+               <h2 class="headerText">
+               MOTS Pages Guide
+               </h2>
+            </div>
+         </div>
+         <div class = "mainBody">
+		 <br>
+		 <div class="textBody">
+			<h4>Welcome to the MOTS guide on pages, this guides purpose is to help you through your pages journey with your client.</h4>
+			<h4>The tool will go through the various cases and explain the process that you and your client need to go through for support.</h4>
+			<h4>The tool will then help provide the details you will need to submit for a MOTs case if needed.</h4>
+		 </div> 
+			<div id="page1">
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-3">
+					  <div class="well" onclick="CompanyToShowcase()" style="padding: 0 !important; padding-top: 45px!important;">Company to Showcase</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';" style="padding-top: 30px!important;">Company to University</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';" style="padding-top: 30px!important;">Showcase to Company</div>
+				   </div>
+				</div>
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-3">
+					  <div class="well" onclick="location.href='selections/rebrand-rename.html';" style="padding-top: 30px!important;">Showcase to University</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='#';" style="padding-top: 30px!important;">University to Company</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="location.href='selections/faqs.html';" style="padding-top: 30px!important;">University to Showcase</div>
+				   </div>
+				</div>
+			</div>
+			<div id="lvl_results_yes">
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-2">
+					  <img src="../assets/Tick_Icon.png" id="resultsImage" />
+				   </div>
+				   <div class="col-md-3" id="displayText">
+					  <h4>We <b>can</b> perform this change</h4>
+					  <h4 id = "resultReason-yes">Please feel free to copy the below into a case to MOTs</h4>
+				   </div>
+				</div>
+				<div class="row">
+				   <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+					  <p>Request Type: Claim/Deactivate</p>
+					  <p id="level1-results-yes">level 1</p>
+					  <p id="level2-results-yes">level 2</p>
+				   </div>
+				   <div class="col-md-3 col-md-offset-4">
+					  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-yes"/></div>
+				   </div>
+				</div>
+				<div class="row">
+				   <div class="well-openMotsCase" id="open_case" onclick="location.href='https://lnkd.in/gb679H8F';">Open a MOTs Case</div>
+				</div>
+			 </div>
+         </div>
+      </div>
+	  <script>
+		$(document).ready(function() { 
+	
+			document.getElementById("lvl_results_yes").style.display="none";	
+
+		});
+		function CompanyToShowcase(){
+			
+			document.getElementById("page1").style.display="none";
+			document.getElementById("lvl_results_yes").style.display="block";
+			document.getElementById("resultReason-yes").innerHTML = "Yes - Please Complete the form";
+		
+		}
+	  </script>
+   </body>
+</html>

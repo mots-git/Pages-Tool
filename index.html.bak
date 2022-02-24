@@ -75,7 +75,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-3 col-md-offset-1">
-					  <div onclick="showPage1Function()"><img class="arrowImage" src="assets/backButton.png" /></div>
+					  <div onclick="showPage1Function()"><img class="arrowImage" src="assets/BackButton.png" /></div>
 				   </div>
 				</div>
 				<div class="row">
