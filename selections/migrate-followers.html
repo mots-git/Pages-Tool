@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>MOTS Pages Guide</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="../js/migrate-followers.js"></script>
+   </head>
+   <body>
+      <div class="container text-center">
+      <div class="row">
+         <div class="col-md-4">
+            <img class="headerImage" src="../assets/Owl_Avatar.png" />
+         </div>
+         <div class="col-md-6">
+            <h2 class="headerText">
+               MOTS Pages Guide
+            </h2>
+         </div>
+      </div>
+      <div class = "mainBody">
+         <br>
+         <div class="row">
+            <div class="col-md-3 col-md-offset-2">
+               <div class="titleBox" style="padding-top: 20px!important">Migrate Followers</div>
+            </div>
+         </div>
+         <div id="lvl_1">
+            <h4 id="q1">Are any of the pages in question a subsidiary of the other or the result of an acquisition?</h4>
+            <div id="back" class="col-md-3">
+               <div onclick="location.href='../index.html';"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
+            </div>
+            <div id="options">
+               <button class="well" id="level1" onclick="add_results_Level1(this)" style="padding-top: 15px!important;">Yes</button>
+               <button class="well" id="level2" onclick="add_results_Level1(this)" style="padding-top: 15px!important;">No</button>
+            </div>
+         </div>
+         <div id="lvl_results_yes">
+            <div class="row">
+               <div class="col-md-3 col-md-offset-2">
+                  <img src="../assets/Tick_Icon.png" id="resultsImage" />
+               </div>
+               <div class="col-md-3" id="displayText">
+                  <h4>We <b>can</b> perform this change</h4>
+                  <h4 id = "resultReason-yes">Please feel free to copy the below into a case to MOTs</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+                  <p>Request Type: Migrate Followers</p>
+                  <p id="level1-results-yes">level 1</p>
+                  <p id="level2-results-yes">level 2</p>
+               </div>
+               <div class="col-md-3 col-md-offset-4">
+                  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-yes"/></div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="well-openMotsCase" id="open_case" onclick="location.href='https://lnkd.in/gb679H8F';">Open a MOTs Case</div>
+            </div>
+         </div>
+         <div id="lvl_results_no">
+            <div class="row">
+               <div class="col-md-3 col-md-offset-2">
+                  <img src="../assets/Line_Icon.png" id="resultsImage" />
+               </div>
+               <div class="col-md-3" id="displayText">
+                  <h4>It is <b>unlikely</b> that this change can be processed at this moment</h4>
+                  <h4 id = "resultReason-no">But please feel free to copy the below into a case to MOTs</h4>
+				  <a href = 'https://docs.google.com/document/d/12l9adFgT1K6TmLauU8i7n5P1IWx2ZqEXh79GGp_iPuw/edit#heading=h.ov7zcjv3fpoy' style="font-size:18px;"> here </a>
+               </div>
+            </div>
+            <div class="row">
+               <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+                  <p>Request Type: Migrate Followers</p>
+                  <p id="level1-results-no">level 1</p>
+                  <p id="level2-results-no">level 2</p>
+               </div>
+               <div class="col-md-3 col-md-offset-4">
+                  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-no"/></div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="well-openMotsCase" id="open_case" onclick="location.href='https://lnkd.in/gb679H8F';">Open a MOTs Case</div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-9">
+               <div onclick="location.href='../index.html';"><img class="arrowImage" src="../assets/Return_Icon.png" style="float:right"/></div>
+            </div>
+         </div>
+         <br>
+      </div>
+      <script type="text/javascript">
+         $(document).ready(function() {          
+			 document.getElementById("lvl_1").style.display="block";
+			 document.getElementById("lvl_results_yes").style.display="none";
+			 document.getElementById("lvl_results_no").style.display="none";         
+         });
+      </script>
+   </body>
+</html>
