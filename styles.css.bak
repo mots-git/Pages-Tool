@@ -55,6 +55,10 @@ body{
     float: left;
     margin-left: 20px;
 }
+#pageText{
+	float:left; 
+	margin-left:-20px;
+}
 .headerImage{
 	height: 100px;
     margin-left: -15px;
@@ -126,6 +130,43 @@ border: 1px black solid;
 .plusminus {
 	float: right;
 }
+.float-container {
+			border: 3px solid #fff;
+			padding: 20px;
+			margin-left: 11%;
+		}
+
+		.float-child-left {
+			width: 20%;
+			float: left;
+			padding: 20px;
+		} 
+		.float-child-right {
+			width: 50%;
+			float: left;
+			margin-left: 1%;
+		} 	
+		.bullet-info{
+			text-align: left;
+			font-size: 15px;
+		}
+		.tick-image {
+		  list-style-image: url(/assets/Tick_Icon_List.png);
+		}
+		.float-container-buttons {
+			border: 3px solid #fff;
+			padding: 20px;
+			margin-left: 30%;
+		}
+		.float-child-left-buttons {
+			width: 20%;
+			float: left;
+		} 
+		.float-child-right-buttons {
+			width: 50%;
+			float: left;
+			margin-left: 1%;
+		} 
 @media (min-width: 992px){
 	.col-md-3 {
 		width: 20%;
