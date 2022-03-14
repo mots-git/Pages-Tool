@@ -7,7 +7,12 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="../styles.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="../js/claim-deactivate.js"></script>
+      <script src="../js/add-remove-admin.js"></script>
+      <style>
+         .titleBox {
+             height: 120px!important;
+          }
+      </style>
    </head>
    <body>
       <div class="container text-center">
@@ -25,27 +30,18 @@
          <br>
          <div class="row">
             <div class="col-md-3 col-md-offset-2">
-               <div class="titleBox" style="padding-top: 20px!important">Claim / Deactivate</div>
+               <div class="titleBox" style="padding-top: 20px!important">Add / Remove Admin</div>
             </div>
          </div>
          <div id="lvl_1">
-            <h4 id="q1">What would you like to do with your page?</h4>
+            <h4 id="q1">Are you adding or removing an admin?</h4>
             <div id="back" class="col-md-3">
                <div onclick="location.href='../index.html';"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
             </div>
             <div id="options">
-               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 15px!important;"> Deactivate </button>
-               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 15px!important;"> Claim </button>
-            </div>
-         </div>
-         <div id="lvl_2">
-            <h4 id="q2">How many employees?</h4>
-            <div id="back" class="col-md-3">
-               <div onclick="reduce_x()"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
-            </div>
-            <div id="options">
-               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> More than 100 </button>
-               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> Less than 100 </button>
+               <button class="well" id="level1" onclick="add_results_Level1(this)" style="padding-top: 15px!important;">Adding</button>
+               <button class="well" id="level2" onclick="add_results_Level1(this)" style="padding-top: 15px!important;">Removing</button>
+               <button class="well" id="level3" onclick="add_results_Level1(this)" style="padding-top: 15px!important;">Removing</button>
             </div>
          </div>
          <div id="lvl_results_yes">
@@ -60,22 +56,16 @@
             </div>
             <div class="row">
                <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
-                  <p>Request Type: Claim/Deactivate</p>
+                  <p>Request Type: Add/Remove Admin</p>
                   <p id="level1-results-yes">level 1</p>
                   <p id="level2-results-yes">level 2</p>
                </div>
                <div class="col-md-3 col-md-offset-4">
-                  <!--
-                     <button class="btn" style='font-size:80px;' onclick="copyFunction()" >&#128203;</button>
-                     -->
                   <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-yes"/></div>
                </div>
             </div>
             <div class="row">
-               <!-- <button class="btn" id="open_case" onclick="location.href='https://lnkd.in/gb679H8F';" > Open case to MOTs</button>
-                  The button used to copy the text -->
                <div class="well-openMotsCase" id="open_case" onclick="location.href='https://lnkd.in/gb679H8F';">Open a MOTs Case</div>
-               <!-- The text field -->
             </div>
          </div>
          <div id="lvl_results_no">
@@ -91,22 +81,16 @@
             </div>
             <div class="row">
                <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
-                  <p>Request Type: Claim/Deactivate</p>
+                  <p>Request Type: Add/Remove Admin</p>
                   <p id="level1-results-no">level 1</p>
                   <p id="level2-results-no">level 2</p>
                </div>
                <div class="col-md-3 col-md-offset-4">
-                  <!--
-                     <button class="btn" style='font-size:80px;' onclick="copyFunction()" >&#128203;</button>
-                     -->
                   <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-no"/></div>
                </div>
             </div>
             <div class="row">
-               <!-- <button class="btn" id="open_case" onclick="location.href='https://lnkd.in/gb679H8F';" > Open case to MOTs</button>
-                  The button used to copy the text -->
                <div class="well-openMotsCase" id="open_case" onclick="location.href='https://lnkd.in/gb679H8F';">Open a MOTs Case</div>
-               <!-- The text field -->
             </div>
          </div>
          <div class="row">
@@ -119,9 +103,10 @@
       <script type="text/javascript">
          $(document).ready(function() {          
 			 document.getElementById("lvl_1").style.display="block";
-			 document.getElementById("lvl_2").style.display="none";
+			 //document.getElementById("lvl_2").style.display="none";
 			 document.getElementById("lvl_results_yes").style.display="none";
-			 document.getElementById("lvl_results_no").style.display="none";         
+			 document.getElementById("lvl_results_no").style.display="none";
+          document.getElementById("level3").style.display="none";         
          });
       </script>
    </body>
