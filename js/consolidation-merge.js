@@ -4,6 +4,7 @@ var questionText=document.getElementById("q1");
 var level1Result = "";
 var level2Result = "";
 var level3Result = "";
+var count = 0;
 
 function copyFunction() {
   /* Get the text field */
@@ -21,7 +22,14 @@ function add_results_Level1(o) {
 	questionText=document.getElementById("q1").textContent;
 	console.log(level1Result);
 	if(level1Result.includes("Yes") && level==1){
-		window.location.replace("https://mots-git.github.io/Pages-Tool/selections/acquisition.html");
+		document.getElementById("lvl_1").style.display = "none";
+		document.getElementById("boxTitle").innerHTML = "Acquisition / Consolidation";
+		document.getElementById("lvl_results_yes").style.display = "block";
+		document.getElementById("level1-results-yes").innerHTML = "We can merge";
+		document.getElementById("level2-results-yes").innerHTML = "Full answer here";	
+		document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
+		level1Result = document.getElementById("level1-results-yes").innerHTML;
+		level2Result = document.getElementById("level2-results-yes").innerHTML;
 	}
 	else if(level1Result.includes("No") && level==1){
 		level=2;	
@@ -92,6 +100,7 @@ function add_results_Level1(o) {
 		level2Result = document.getElementById("level2-results-yes").innerHTML;		
 	}
 }
+
 let saveFile = () => {
         // This variable stores all the data.
         let data = 
