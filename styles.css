@@ -59,7 +59,7 @@ body{
 }
 #pageText{
 	float:left; 
-	margin-left:-20px;
+	margin-left: 0px;
 }
 .headerImage{
 	height: 100px;
@@ -96,6 +96,8 @@ border: 1px black solid;
 }
 #q1, #q2, #q3, #q4, #resultText{
 	text-align: center;
+	margin-top: 30px;
+    margin-bottom: 30px;
 	/*margin-right: 16%;*/
 }
 #level1, #level2, #level3, #level4{
