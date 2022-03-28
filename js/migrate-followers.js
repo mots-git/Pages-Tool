@@ -23,8 +23,8 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_no").style.display = "block";
-		document.getElementById("level1-results-no").innerHTML = "We cannot migrate";
-		document.getElementById("level2-results-no").innerHTML = "We will not migrate followers when there is an acquisition involved";
+		document.getElementById("level1-results-no").innerHTML = "Expected Source page URL:";
+		document.getElementById("level2-results-no").innerHTML = "Expected Destination page URL:";
 		document.getElementById("assets-copy-image-no").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-no").innerHTML;
 		level2Result = document.getElementById("level2-results-no").innerHTML;
@@ -33,8 +33,8 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_yes").style.display = "block";
-		document.getElementById("level1-results-yes").innerHTML = "We can migrate";
-		document.getElementById("level2-results-yes").innerHTML = "Full answer here or raise a ticket";	
+		document.getElementById("level1-results-yes").innerHTML = "Expected Source page URL:";
+		document.getElementById("level2-results-yes").innerHTML = "Expected Destination page URL:";	
 		document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;

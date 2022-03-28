@@ -23,10 +23,16 @@ function add_results_Level1(o) {
 	console.log(level1Result);
 	if(level1Result.includes("Yes") && level==1){
 		document.getElementById("lvl_1").style.display = "none";
-		document.getElementById("boxTitle").innerHTML = "Acquisition / Consolidation";
+		document.getElementById("resultsImage").style.display = "none";
+		document.getElementById("resultReason-yes2").style.display = "none";
+		document.getElementById("boxTitle").innerHTML = "Acquisition / Affiliation";
+		document.getElementById("redirect1").innerHTML = "As one or more of the pages involved are acquired we cannot merge/consolidate(Unless the acquisition was over 10 years ago).";
+		document.getElementById("redirect2").innerHTML = "Instead we can offer to affiliate these pages, selecting one as a Parent and the other as a child page.";
+		document.getElementById("redirect3").innerHTML = "We can also offer to add an acquisition banner to the child page that will redirect to the parent page.";
 		document.getElementById("lvl_results_yes").style.display = "block";
-		document.getElementById("level1-results-yes").innerHTML = "We can merge";
-		document.getElementById("level2-results-yes").innerHTML = "Full answer here";	
+		document.getElementById("level1-results-yes").innerHTML = "Expected Parent page URL:";
+		document.getElementById("level2-results-yes").innerHTML = "Expected child page(s) URL:";
+		document.getElementById("level3-results-yes").innerHTML = "Would you like to add a banner:";
 		document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
@@ -47,8 +53,10 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_yes").style.display = "block";
-		document.getElementById("level1-results-yes").innerHTML = "We can merge";
-		document.getElementById("level2-results-yes").innerHTML = "Full answer here";	
+		document.getElementById("bullet-points-acquisition").style.display = "none";
+		document.getElementById("level3-results-yes").style.display = "none";
+		document.getElementById("level1-results-yes").innerHTML = "Expected Parent page URL:";
+		document.getElementById("level2-results-yes").innerHTML = "Expected child page(s) URL:";	
 		document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
@@ -57,8 +65,8 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_no").style.display = "block";
-		document.getElementById("level1-results-no").innerHTML = "We cannot merge";
-		document.getElementById("level2-results-no").innerHTML = "Please feel free to raise a ticket below";
+		document.getElementById("level1-results-no").innerHTML = "Expected Parent page URL:";
+		document.getElementById("level2-results-no").innerHTML = "Expected child page(s) URL:";
 		document.getElementById("assets-copy-image-no").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-no").innerHTML;
 		level2Result = document.getElementById("level2-results-no").innerHTML;
@@ -67,8 +75,8 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_no").style.display = "block";
-		document.getElementById("level1-results-no").innerHTML = "We cannot merge";
-		document.getElementById("level2-results-no").innerHTML = "Please feel free to raise a ticket below";
+		document.getElementById("level1-results-no").innerHTML = "Expected Parent page URL:";
+		document.getElementById("level2-results-no").innerHTML = "Expected child page(s) URL:";
 		document.getElementById("assets-copy-image-no").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-no").innerHTML;
 		level2Result = document.getElementById("level2-results-no").innerHTML;
@@ -82,8 +90,8 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_no").style.display = "block";
-		document.getElementById("level1-results-no").innerHTML = "We cannot merge";
-		document.getElementById("level2-results-no").innerHTML = "Please feel free to raise a ticket below";
+		document.getElementById("level1-results-no").innerHTML = "Expected Parent page URL:";
+		document.getElementById("level2-results-no").innerHTML = "Expected child page(s) URL:";
 		document.getElementById("assets-copy-image-no").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-no").innerHTML;
 		level2Result = document.getElementById("level2-results-no").innerHTML;
@@ -93,8 +101,10 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_yes").style.display = "block";
-		document.getElementById("level1-results-yes").innerHTML = "We can merge";
-		document.getElementById("level2-results-yes").innerHTML = "Full answer here";
+		document.getElementById("bullet-points-acquisition").style.display = "none";
+		document.getElementById("level1-results-yes").innerHTML = "Expected Parent page URL:";
+		document.getElementById("level2-results-yes").innerHTML = "Expected child page(s) URL:";
+		document.getElementById("level3-results-yes").style.display = "none";
 		document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;		
