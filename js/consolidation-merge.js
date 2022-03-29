@@ -30,6 +30,8 @@ function add_results_Level1(o) {
 		document.getElementById("redirect2").innerHTML = "Instead we can offer to affiliate these pages, selecting one as a Parent and the other as a child page.";
 		document.getElementById("redirect3").innerHTML = "We can also offer to add an acquisition banner to the child page that will redirect to the parent page.";
 		document.getElementById("lvl_results_yes").style.display = "block";
+		document.getElementById("displayText").style.width = "50%";
+		document.getElementById("fix-width").style.width = "10%";
 		document.getElementById("level1-results-yes").innerHTML = "Expected Parent page URL:";
 		document.getElementById("level2-results-yes").innerHTML = "Expected child page(s) URL:";
 		document.getElementById("level3-results-yes").innerHTML = "Would you like to add a banner:";

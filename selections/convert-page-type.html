@@ -8,6 +8,11 @@
       <link rel="stylesheet" href="../styles.css">	  
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	  <script src="../js/convert-page-type.js"></script>
+	  <style>
+	  	.mainBody {
+		    height: 650px;
+		}
+	  </style>
    </head>
    <body>
       <div class="container text-center">
@@ -66,8 +71,12 @@
 					  <img src="../assets/Tick_Icon.png" id="resultsImage" />
 				   </div>
 				   <div class="col-md-3" id="displayText">
-					  <h4>We <b>can</b> perform this change</h4>
-					  <h4 id = "resultReason-yes">Please feel free to copy the below into a case to MOTs</h4>
+					  <h4>We will review this change.</h4>
+					  <h4 id = "resultReason-yes">Please provide the following when opening a ticket</h4>
+					  <ul>
+					  		<li id="bullet1" style="text-align: left;font-size: 18px;"></li>
+					  		<li id="bullet2" style="text-align: left;font-size: 18px;"></li>
+					  </ul>
 				   </div>
 				</div>
 				<div class="row">
@@ -75,6 +84,7 @@
 					  <p>Request Type: Convert Page Type</p>
 					  <p id="level1-results-yes">level 1</p>
 					  <p id="level2-results-yes">level 2</p>
+					  <p id="level3-results-yes">level 3</p>
 				   </div>
 				   <div class="col-md-3 col-md-offset-4">
 					  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-yes"/></div>

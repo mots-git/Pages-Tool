@@ -24,89 +24,44 @@ function add_results_Level1(o) {
 }
 function add_results_Level2(o) {
 	level2Result = o.innerHTML;
-}
-function add_results_Level3(o) {
 	level3Result = o.innerHTML;
 	document.getElementById("level1-results-yes").innerHTML = "Number of Employees: " + level1Result;
 	document.getElementById("level2-results-yes").innerHTML = "Severity of Change: " + level2Result;
 	document.getElementById("level3-results-yes").innerHTML = "Age of Plan: " + level3Result;
 	document.getElementById("level1-results-no").innerHTML = "Number of Employees: " + level1Result;
 	document.getElementById("level2-results-no").innerHTML = "Severity of Change: " + level2Result;
-	document.getElementById("level3-results-no").innerHTML = "Age of Plan: " + level3Result;
+	document.getElementById("level3-results-no").innerHTML = "Page URL the client wishes to rebrand/rename: ";
 	console.log("true results" + level1Result + level2Result + level3Result)
 	
 	if(level1Result.includes("More than 500") &&
-		level2Result.includes("Significant change") &&
-		level3Result.includes("Less than a year old")){
+		level2Result.includes("Significant change")){
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
 	}
 	else if(level1Result.includes("More than 500") &&
-		level2Result.includes("Significant change") &&
-		level3Result.includes("More than a year old")){
-			document.getElementById("lvl_results_no").style.display="block";
-			document.getElementById("lvl_results_yes").style.display="none";
-	}
-	else if(level1Result.includes("More than 500") &&
-		level2Result.includes("Significant change") &&
-		level3Result.includes("I don't know")){
-			document.getElementById("lvl_results_no").style.display="block";
-			document.getElementById("lvl_results_yes").style.display="none";
-	}
-	else if(level1Result.includes("More than 500") &&
-		level2Result.includes("Minor change") &&
-		level3Result.includes("I don't know")){
+		level2Result.includes("Minor change")){
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
 	}
 	else if(level1Result.includes("Less than 500") &&
-		level2Result.includes("Minor change") &&
-		level3Result.includes("I don't know")){
+		level2Result.includes("Minor change")){
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
 	}
 	else if(level1Result.includes("Less than 500") &&
-		level2Result.includes("Minor change") &&
-		level3Result.includes("Less than a year old")){
+		level2Result.includes("Minor change")){
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
+			//self serve
 	}
 	else if(level1Result.includes("Less than 500") &&
-		level2Result.includes("Minor change") &&
-		level3Result.includes("More than a year old")){
+		level2Result.includes("Significant change")){
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
 	}
-	else if(level1Result.includes("More than 500") &&
-		level2Result.includes("Minor change") &&
-		level3Result.includes("More than a year old")){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";
-	}
-	else if(level1Result.includes("More than 500") &&
-		level2Result.includes("Minor change") &&
-		level3Result.includes("Less than a year old")){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";
-	}
-	else if(level1Result.includes("Less than 500") &&
-		level2Result.includes("Significant change") &&
-		level3Result.includes("I don't know")){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";
-	}
-	else if(level1Result.includes("Less than 500") &&
-		level2Result.includes("Significant change") &&
-		level3Result.includes("Less than a year old")){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";
-	}
-	else if(level1Result.includes("Less than 500") &&
-		level2Result.includes("Significant change") &&
-		level3Result.includes("More than a year old")){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";
-	}
+}
+function add_results_Level3(o) {
+	
 }
 
 function switch_fun(){
@@ -115,7 +70,7 @@ function switch_fun(){
     	// code block
     	document.getElementById("lvl_1").style.display="block";
     	document.getElementById("lvl_2").style.display="none";
-    	document.getElementById("lvl_3").style.display="none";
+    	//document.getElementById("lvl_3").style.display="none";
     	document.getElementById("lvl_results_yes").style.display="none";
 		document.getElementById("lvl_results_no").style.display="none";
     	console.log(x);
@@ -124,40 +79,17 @@ function switch_fun(){
     	// code block
     	document.getElementById("lvl_1").style.display="none";
     	document.getElementById("lvl_2").style.display="block";
-    	document.getElementById("lvl_3").style.display="none";
+    	//document.getElementById("lvl_3").style.display="none";
     	document.getElementById("lvl_results_yes").style.display="none";
 		document.getElementById("lvl_results_no").style.display="none";
     	console.log(x);
     	break;
   		case 2:
     	// code block
-    	document.getElementById("lvl_1").style.display="none";
-    	document.getElementById("lvl_2").style.display="none";
-    	document.getElementById("lvl_3").style.display="block";
-    	document.getElementById("lvl_results_yes").style.display="none";
-		document.getElementById("lvl_results_no").style.display="none";
-    	console.log(x);
-    	break;
-    	case 3:
-    	// code block
 		document.getElementById("lvl_1").style.display="none";
     	document.getElementById("lvl_2").style.display="none";
-    	document.getElementById("lvl_3").style.display="none";
-		//document.getElementById("lvl_results_yes").style.display="none";
-		//changeResult = false;
 		console.log("check value "+changeResult)
-		if(changeResult == false){
-		document.getElementById("lvl_results_yes").style.display="none";
-			document.getElementById("lvl_results_no").style.display="block";			
-			console.log(changeResult)
-		}
-		if(changeResult == true){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";			
-			console.log(changeResult)
-		}
 		console.log(x);
-		//console.log(level1Result + level2Result + level3Result);
 	}
 }
 
@@ -177,7 +109,7 @@ let saveFile = () => {
 			'Request Type: Rebrand' + ' \r\n ' + 
             'Number of Employees: ' + level1Result + ' \r\n ' + 
             'Severity of Change: ' +level2Result + ' \r\n ' + 
-            'Age of Plan: ' + level3Result;
+            'Page URL the client wishes to rebrand/rename: ';
         
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });

@@ -35,7 +35,7 @@
             </div>
             <div id="options">
                <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 25px!important;"> More than 500 </button>
-               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 25px!important;"> Less than 500</button>
+               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 25px!important;"> Less than 500 </button>
             </div>
          </div>
          <div id="lvl_2">
@@ -44,19 +44,17 @@
                <div onclick="reduce_x()"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
             </div>
             <div id="options">
-               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> Significant change</button>
-               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> Minor change</button>
-            </div>
-         </div>
-         <div id="lvl_3">
-            <h4 id="q3" style="margin-left:8%;">How old is the page?</h4>
-            <div id="back" class="col-md-1" style="margin-right: 30px;">
-               <div onclick="reduce_x()"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
-            </div>
-            <div id="options">
-               <button class="well" id="level3" onclick="logic_fun(),add_results_Level3(this)" style="padding-top: 25px!important;"> More than a year old</button>
-               <button class="well" id="level3" onclick="logic_fun(),add_results_Level3(this)" style="padding-top: 25px!important;"> Less than a year old</button>
-               <button class="well" id="level3" onclick="logic_fun(),add_results_Level3(this)" style="padding-top: 25px!important;"> I don't know</button>
+               <div class="tooltip">
+                  <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> Significant change</button>
+                  <span class="tooltiptext">e.g. Complete renaming (Facebook -> Meta)</span>
+               </div>
+               <div class="tooltip">
+                  <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> Minor change</button>
+                  <span class="tooltiptext">e.g. Adding to/removing small changes (The box company -> Box company)</span>
+               </div>
+               
+               
+               
             </div>
          </div>
          <div id="lvl_results_yes">
@@ -65,8 +63,8 @@
                   <img src="../assets/Tick_Icon.png" id="resultsImage" />
                </div>
                <div class="col-md-3" id="displayText">
-                  <h4>We <b>can</b> perform this change</h4>
-                  <h4>Please feel free to copy the below into a case to MOTs</h4>
+                  <h4>Based on your inputs we should be able to process this request</h4>
+                  <h4>Please continue to open a case and copy the following into it</h4>
                </div>
             </div>
             <div class="row">
@@ -101,8 +99,8 @@
                   <img src="../assets/Line_Icon.png" id="resultsImage" />
                </div>
                <div class="col-md-3" id="displayText">
-                  <h4>It is <b>unlikely</b> that this change can be processed at this moment</h4>
-                  <h4>But please feel free to copy the below into a case to MOTs</h4>
+                  <h4>Based on your inputs it is <b>unlikely</b> that we can process this request</h4>
+                  <h4>However please continue to open a case and copy the following into it</h4>
                </div>
             </div>
             <div class="row">
@@ -142,7 +140,7 @@
          $(document).ready(function() {          
 			 document.getElementById("lvl_1").style.display="block";
 			 document.getElementById("lvl_2").style.display="none";
-			 document.getElementById("lvl_3").style.display="none";
+			 //document.getElementById("lvl_3").style.display="none";
 			 document.getElementById("lvl_results_yes").style.display="none";
 			 document.getElementById("lvl_results_no").style.display="none";         
          });
