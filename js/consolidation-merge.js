@@ -35,7 +35,7 @@ function add_results_Level1(o) {
 		document.getElementById("level1-results-yes").innerHTML = "Expected Parent page URL:";
 		document.getElementById("level2-results-yes").innerHTML = "Expected child page(s) URL:";
 		document.getElementById("level3-results-yes").innerHTML = "Would you like to add a banner:";
-		document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
+		document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
 	}
