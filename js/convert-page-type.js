@@ -9,7 +9,8 @@ function CompanyToShowcase() {
 	document.getElementById("page1").style.display = "none";
 	document.getElementById("descriptionText").style.display = "none";
 	document.getElementById("lvl_results_yes").style.display = "block";
-	document.getElementById("bullet1").innerHTML = "A completed copy of this form";
+	document.getElementById("bullet1").style.display = "none";
+	document.getElementById("bullet1-company-showcase").style.display = "list-item";
 	document.getElementById("bullet2").innerHTML = "A copy of the below information";
 	//document.getElementById("resultReason-yes").innerHTML = "Yes - Please Complete the form";
 	document.getElementById("level1-results-yes").innerHTML = "Type of Change: Company to Showcase";
@@ -29,7 +30,7 @@ function CompanyToUniversity() {
 	//document.getElementById("resultReason-yes").innerHTML = "Yes - Email needed from Admin of page verifying request";
 	document.getElementById("level1-results-yes").innerHTML = "Type of Change: Company to University";
 	document.getElementById("level2-results-yes").innerHTML = "Company page URL:";
-	document.getElementById("level3-results-yes").innerHTML = "Desired parent page URL:";
+	document.getElementById("level3-results-yes").style.display = "none";
 	document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
 
 }
@@ -44,7 +45,7 @@ function ShowcaseToCompany() {
 	//document.getElementById("resultReason-yes").innerHTML = "Yes - Email needed from Admin of page verifying request";
 	document.getElementById("level1-results-yes").innerHTML = "Type of Change: Showcase to Company";
 	document.getElementById("level2-results-yes").innerHTML = "Company page URL:";
-	document.getElementById("level3-results-yes").innerHTML = "Desired parent page URL:";
+	document.getElementById("level3-results-yes").style.display = "none";
 	document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
 
 }
@@ -59,7 +60,7 @@ function ShowcaseToUniversity() {
 	//document.getElementById("resultReason-yes").innerHTML = "Yes - Email needed from Admin of page verifying request";
 	document.getElementById("level1-results-yes").innerHTML = "Type of Change: Showcase to University";
 	document.getElementById("level2-results-yes").innerHTML = "Company page URL:";
-	document.getElementById("level3-results-yes").innerHTML = "Desired parent page URL:";
+	document.getElementById("level3-results-yes").style.display = "none";
 	document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
 
 }
@@ -74,7 +75,7 @@ function UniversityToCompany() {
 	//document.getElementById("resultReason-yes").innerHTML = "Yes - Email needed from Admin of page verifying request";
 	document.getElementById("level1-results-yes").innerHTML = "Type of Change: University to Company";
 	document.getElementById("level2-results-yes").innerHTML = "Company page URL:";
-	document.getElementById("level3-results-yes").innerHTML = "Desired parent page URL:";
+	document.getElementById("level3-results-yes").style.display = "none";
 	document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
 
 }

@@ -12,6 +12,9 @@
          .titleBox {
              height: 90px!important;
           }
+          .mainBody {
+            height: 680px;
+         }
       </style>
    </head>
    <body>
@@ -50,15 +53,16 @@
                   <img src="../assets/Tick_Icon.png" id="resultsImage" />
                </div>
                <div class="col-md-3" id="displayText">
-                  <h4>We <b>can</b> perform this change</h4>
-                  <h4 id = "resultReason-yes">Please feel free to copy the below into a case to MOTs</h4>
+                  <h4 id="answerline1"></h4>
+                  <h4 id="answerline1-yes-no" style="display: none;">Please ask the member to raise a page admin request <a href="https://www.linkedin.com/help/linkedin/answer/a569092/request-admin-access-to-a-linkedin-page?lang=en" style="text-decoration: underline;">here</a> and ask them to allow 7 days before reaching out again</h4>
+                  <h4 id = "resultReason-yes">Please feel free to copy the below into a case</h4>
                </div>
             </div>
-            <div class="row">
+            <div class="row" id="resultsDisplay">
                <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
-                  <p>Request Type: Add/Remove Admin</p>
-                  <p id="level1-results-yes">level 1</p>
-                  <p id="level2-results-yes">level 2</p>
+                  <p id="level1-results-yes">Request Type: Add/Remove Admin</p>
+                  <p id="level2-results-yes">level 1</p>
+                  <p id="level3-results-yes">level 2</p>
                </div>
                <div class="col-md-3 col-md-offset-4">
                   <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-yes"/></div>

@@ -24,6 +24,9 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_yes").style.display = "block";
+		document.getElementById("resultsDisplay").style.display = "none";	
+		document.getElementById("answerline1").innerHTML = "Please open a case and provide confirmation email provided by an admin of the Page, this should explicitly list who is requesting the removal and their relationship to the page";
+		document.getElementById("resultReason-yes").style.display = "none";
 		document.getElementById("level1-results-yes").innerHTML = "Confirmation email provided by an admin of the Page, this should explicitly list who is requesting the removal and their relationship to the Page";
 		document.getElementById("level2-results-yes").innerHTML = "Please feel free to raise a ticket below";
 		document.getElementById("assets-copy-image-yes").style.marginTop = "88px";
@@ -49,8 +52,10 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_yes").style.display = "block";
-		document.getElementById("level1-results-yes").innerHTML = "Please request that the client/member raise a page admin request first or wait a minimum of 7 days for approval";
-		document.getElementById("level2-results-yes").innerHTML = "Please feel free to raise a ticket below";
+		document.getElementById("answerline1").style.display = "none";
+		document.getElementById("answerline1-yes-no").style.display = "block";
+		document.getElementById("resultsDisplay").style.display = "none";	
+		document.getElementById("resultReason-yes").style.display = "none";
 		document.getElementById("assets-copy-image-yes").style.marginTop = "68px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
@@ -61,20 +66,25 @@ function add_results_Level1(o) {
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_yes").style.display = "block";
-		document.getElementById("level1-results-yes").innerHTML = "Approval in writing from the client to add the new admin to the page. Ensure that this member is an employee of the company, or an agency working with them directly";
-		document.getElementById("level2-results-yes").innerHTML = "Please feel free to raise a ticket below";
+		document.getElementById("answerline1").innerHTML = "We need more information to process this request";
+		document.getElementById("resultReason-yes").innerHTML = "Please copy the below along with any correspondence from the client requesting access to the company page into a case";
+		document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to CP";
+		document.getElementById("level2-results-yes").innerHTML = "Member URL:";
+		document.getElementById("level3-results-yes").innerHTML = "Company Page URL:";
 		document.getElementById("assets-copy-image-yes").style.marginTop = "88px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
 	}
 	else if(level1Result.includes("Yes") && level==3){
-		level=4;
+		level=4;//
 		document.getElementById("level3").style.display="none";
 		console.log("finished");
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_yes").style.display = "block";
-		document.getElementById("level1-results-yes").innerHTML = "Please provide the member URL and confirmation email from client stating the request to add the admin";
-		document.getElementById("level2-results-yes").innerHTML = "Please feel free to raise a ticket below";
+		document.getElementById("answerline1").innerHTML = "Based on your inputs we should be able to add the admin to the page for you, please copy the below into your case along with confirmation email from client requesting to be added as an admin";
+		document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to CP";
+		document.getElementById("level2-results-yes").innerHTML = "Member URL:";
+		document.getElementById("level3-results-yes").innerHTML = "Company Page URL:";
 		document.getElementById("assets-copy-image-yes").style.marginTop = "68px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;

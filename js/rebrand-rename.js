@@ -35,33 +35,52 @@ function add_results_Level2(o) {
 	
 	if(level1Result.includes("More than 500") &&
 		level2Result.includes("Significant change")){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";
+			document.getElementById("lvl_results_no").style.display="block";
+			document.getElementById("lvl_results_yes").style.display="none";
+			document.getElementById("answerline1").innerHTML = "Based on your inputs it is unlikely that we can process this Rebrand, however please continue to open a case and copy the following into it";
+			document.getElementById("answerline2").innerHTML = "However please continue to open a case and copy the following into it";
+			document.getElementById("level1-results-no").innerHTML = "Number of employees: More than 500";
+			document.getElementById("level2-results-no").innerHTML = "Severity of change: Significant change";
+			document.getElementById("level3-results-no").innerHTML = "Page URL the client wishes to rebrand:";
 	}
 	else if(level1Result.includes("More than 500") &&
 		level2Result.includes("Minor change")){
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
+			document.getElementById("answerline1").innerHTML = "Based on your inputs we should be able to process this request";
+			document.getElementById("answerline2").innerHTML = "Please continue to open a case and copy the following into it";
+			document.getElementById("level1-results-yes").innerHTML = "Number of employees: More than 500";
+			document.getElementById("level2-results-yes").innerHTML = "Severity of change: Minor change";
+			document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
+			document.getElementById("level4-results-yes").innerHTML = "New Company name:";
+			
 	}
-	else if(level1Result.includes("Less than 500") &&
-		level2Result.includes("Minor change")){
+	else if(level1Result.includes("Less than 500")){
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
-	}
-	else if(level1Result.includes("Less than 500") &&
-		level2Result.includes("Minor change")){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";
-			//self serve
-	}
-	else if(level1Result.includes("Less than 500") &&
-		level2Result.includes("Significant change")){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";
+			document.getElementById("answerline1").innerHTML = "If the Client's page has less than 500 employees then they can self service a rebrand, more info here";
+			document.getElementById("answerline2").innerHTML = "Please continue to open a case and copy the following into it";
+			document.getElementById("level1-results-yes").innerHTML = "Number of employees: More than 500";
+			document.getElementById("level2-results-yes").innerHTML = "Severity of change: Minor change";
+			document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
+			document.getElementById("level4-results-yes").innerHTML = "New Company name:";
 	}
 }
 function add_results_Level3(o) {
 	
+}
+
+function LessThan500(){
+	document.getElementById("lvl_1").style.display="none";
+    document.getElementById("lvl_2").style.display="none";
+	document.getElementById("lvl_results_no").style.display="none";
+	document.getElementById("lvl_results_yes").style.display="block";
+	document.getElementById("answerline1").innerHTML = "If the Client's page has less than 500 employees then they can self service a rebrand";
+	document.getElementById("answerline2").innerHTML = "If you need more further help please open a case below";
+	document.getElementById("level1-results-yes").innerHTML = "Number of employees: More than 500";
+	document.getElementById("level2-results-yes").innerHTML = "Severity of change: Minor change";
+	document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
+	document.getElementById("level4-results-yes").innerHTML = "New Company name:";
 }
 
 function switch_fun(){

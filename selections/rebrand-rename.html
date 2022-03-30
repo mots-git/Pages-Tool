@@ -8,6 +8,12 @@
       <link rel="stylesheet" href="../styles.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="../js/rebrand-rename.js"></script>
+      <style>
+         .mainBody{
+            background-color: white;
+            height: 670px;
+         }
+      </style>
    </head>
    <body>
       <div class="container text-center">
@@ -35,7 +41,7 @@
             </div>
             <div id="options">
                <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 25px!important;"> More than 500 </button>
-               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 25px!important;"> Less than 500 </button>
+               <button class="well" id="level1" onclick="LessThan500()" style="padding-top: 25px!important;"> Less than 500 </button>
             </div>
          </div>
          <div id="lvl_2">
@@ -63,8 +69,9 @@
                   <img src="../assets/Tick_Icon.png" id="resultsImage" />
                </div>
                <div class="col-md-3" id="displayText">
-                  <h4>Based on your inputs we should be able to process this request</h4>
-                  <h4>Please continue to open a case and copy the following into it</h4>
+                  <h4 id="answerline1">Based on your inputs we should be able to process this request</h4>
+                  <h4 id="answerline2">Please continue to open a case and copy the following into it</h4>
+                  <p style="font-size: 18px;">More information can be found <a href="https://www.linkedin.com/help/lms/answer/a566295" style="text-decoration: underline;">here</a></p>
                </div>
             </div>
             <div class="row">
@@ -73,6 +80,7 @@
                   <p id="level1-results-yes">level 1</p>
                   <p id="level2-results-yes">level 2</p>
                   <p id="level3-results-yes">level 3</p>
+                  <p id="level4-results-yes"></p>
                </div>
                <div class="col-md-3 col-md-offset-4">
                   <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-yes"/></div>
@@ -101,6 +109,7 @@
                <div class="col-md-3" id="displayText">
                   <h4>Based on your inputs it is <b>unlikely</b> that we can process this request</h4>
                   <h4>However please continue to open a case and copy the following into it</h4>
+                  <p style="font-size: 18px;">More information can be found <a href="https://www.linkedin.com/help/lms/answer/a566295" style="text-decoration: underline;">here</a></p>
                </div>
             </div>
             <div class="row">
@@ -109,6 +118,7 @@
                   <p id="level1-results-no">level 1</p>
                   <p id="level2-results-no">level 2</p>
                   <p id="level3-results-no">level 3</p>
+                  <p id="level4-results-no"></p>
                </div>
                <div class="col-md-3 col-md-offset-4">
                   <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-no"/></div>
