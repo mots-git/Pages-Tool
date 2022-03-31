@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-5">
                <div class="titleTextBody">
-                  <h4>Information required for de-affiliation request:</h4>
+                  <h4>In order to process a de-affiliation we require the following:</h4>
                </div>
             </div>
          </div>
@@ -55,27 +55,36 @@
 								<br>
 								<p style="margin-left:3%">- Example: "I wish to de-affiliate the following two pages: Page name 1 (Page ID: 12345) and Page name 2 (Page ID: 12346)"</p>
 							</li>
-							<li class="tick-image">For Enterprise and GSA accounts or if your account is part of the Accelerate exception list please open a ticket with MOTS here <a href="https://go/motsticket" target="_blank">(go/motsticket)</a>
-							For OSO accounts please open a ticket here <a href="https://www.linkedin.com/help/linkedin/ask/LM-IR" target="_blank">(GCO ticket)</a></li>
 						</ul>
 					</div>
 				  </div>
-			  
+			  		<div class="row">
+	               <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4" style="left:29%;">
+	                  <p>Request Type: De-Affiliation</p>
+	                  <p id="level1-results-no">Parent page URL:</p>
+	                  <p id="level2-results-no">Child page URL:</p>
+	               </div>
+               <div class="col-md-3 col-md-offset-3">
+                  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-no" style="margin-left:40px; margin-top:50px;"/></div>
+               </div>
+            </div>
 			</div>
 		</div>
 		
 		<div class="row">
-			 <div class="float-container-buttons">
 
-				  <div class="float-child-left-buttons">
-					<div class="well-openMotsCase"  onclick="window.open('https://iwww.corp.linkedin.com/wiki/cf/pages/viewpage.action?spaceKey=ENGS&title=Edit+Company+Posts')">More Information</div>
-				  </div>
-				  
-				  <div class="float-child-right-buttons">
-					<div class="well-openMotsCase"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
-				  </div>
-			</div>
-		</div>
+               <div class="float-container-buttons">
+
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/CP-PRIMARY')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+              </div>
+           
+               </div>
+            </div>
          <br>
       </div>
    </body>

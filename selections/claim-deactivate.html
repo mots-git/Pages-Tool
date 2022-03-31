@@ -8,6 +8,11 @@
       <link rel="stylesheet" href="../styles.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="../js/claim-deactivate.js"></script>
+      <style>
+         .mainBody {
+            height: 680px;
+         }
+      </style>
    </head>
    <body>
       <div class="container text-center">
@@ -54,15 +59,18 @@
                   <img src="../assets/Tick_Icon.png" id="resultsImage" />
                </div>
                <div class="col-md-3" id="displayText">
-                  <h4>We <b>can</b> perform this change</h4>
-                  <h4 id = "resultReason-yes">Please feel free to copy the below into a case to MOTs</h4>
+                  <h4 id="claim-description" style="display: none;">The client can self service a page claim by following the steps <a href="https://www.linkedin.com/help/linkedin/answer/a565267" style="text-decoration: underline;" target="_blank">here</a></h4>
+                  <h4 id="claim-description2" style="display: none;">If they have already done so please see our Add Admin page <a onclick="return redirectAddAdmin();" style="text-decoration: underline; cursor: pointer;">here</a></h4>
+                  <h4 id="answerline1"></h4>
+                  <h4 id="answerline2"></h4>
                </div>
             </div>
             <div class="row">
                <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
-                  <p>Request Type: Claim/Deactivate</p>
                   <p id="level1-results-yes">level 1</p>
                   <p id="level2-results-yes">level 2</p>
+                  <p id="level3-results-yes">level 3</p>
+                  <p id="level4-results-yes">level 4</p>
                </div>
                <div class="col-md-3 col-md-offset-4">
                   <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-yes"/></div>
@@ -89,14 +97,12 @@
                   <img src="../assets/Line_Icon.png" id="resultsImage" />
                </div>
                <div class="col-md-3" id="displayText">
-                  <h4>It is <b>unlikely</b> that this change can be processed at this moment</h4>
-                  <h4 id = "resultReason-no">But please feel free to copy the below into a case to MOTs</h4>
-				      <a href = 'https://docs.google.com/document/d/12l9adFgT1K6TmLauU8i7n5P1IWx2ZqEXh79GGp_iPuw/edit#heading=h.ov7zcjv3fpoy' target="_blank" style="font-size:18px;"> here </a>
+                  <h4 id="answerline1"></h4>
+                  <h4 id = "resultReason-no">If you have any further questions please copy the following and open a case</h4>
                </div>
             </div>
             <div class="row">
                <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
-                  <p>Request Type: Consolidation/Merge</p>
                   <p id="level1-results-no">level 1</p>
                   <p id="level2-results-no">level 2</p>
                </div>

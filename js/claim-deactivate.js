@@ -9,12 +9,17 @@ var changeResult = false;
 function add_results_Level1(o) {
 	level1Result = o.innerHTML;
 	if(level1Result.includes("Claim")){
-		document.getElementById("level1-results-yes").innerHTML = "Solution: " + "Self Service";
-		document.getElementById("level2-results-yes").style.display="none";		
+		document.getElementById("level1-results-yes").innerHTML = "Request Type: Claim";
+		document.getElementById("level2-results-yes").innerHTML ="Company page URL:";
+		document.getElementById("level3-results-yes").innerHTML = "Member URL that wished to be admin:";
+		document.getElementById("level4-results-yes").innerHTML="Page Claim request date (If applicable): ";		
 		document.getElementById("lvl_results_no").style.display="none";
 		document.getElementById("lvl_results_yes").style.display="block";
+		document.getElementById("claim-description").style.display="block";
+		document.getElementById("claim-description2").style.display="block";
+		document.getElementById("answerline1").style.display="none";
+		document.getElementById("answerline2").innerHTML = "If this doesn't help please copy the following and open a case";
 		document.getElementById("lvl_2").style.display="none";
-		document.getElementById("resultReason-yes").innerHTML = "Self service solution";
 		document.getElementById("assets-copy-image-yes").style.marginTop="18px";
 	}
 }
@@ -22,11 +27,11 @@ function add_results_Level2(o) {
 	level2Result = o.innerHTML;
 	if(level1Result.includes("Deactivate")){
 		if(level2Result.includes("More than 100")){
-			document.getElementById("level1-results-no").innerHTML = "Employees: " + level2Result;
-			document.getElementById("level2-results-no").innerHTML = "Solution: " + "Not possilbe please see documentation";
+			document.getElementById("level1-results-no").innerHTML = "Request Type: Deactivate page request";
+			document.getElementById("level2-results-no").innerHTML = "Employee count: Over 100";
 			document.getElementById("lvl_results_yes").style.display="none";
-			document.getElementById("lvl_results_no").style.display="block";			
-			document.getElementById("resultReason-no").innerHTML = "No please read the following link ";
+			document.getElementById("lvl_results_no").style.display="block";
+			document.getElementById("answerline1").innerHTML = "We cannot deactivate this page as there are more than 100 employees associated to it";
 			document.getElementById("assets-copy-image-no").style.marginTop="48px";
 		}
 		else if(level2Result.includes("Less than 100")){
@@ -38,6 +43,18 @@ function add_results_Level2(o) {
 			document.getElementById("assets-copy-image-yes").style.marginTop="48px";
 		}
 	}
+}
+
+function redirectAddAdmin(){
+	document.getElementById("claim-description").style.display="none";
+	document.getElementById("claim-description2").style.display="none";
+	document.getElementById("answerline1").style.display="block";
+	document.getElementById("answerline1").innerHTML = "Based on your inputs we should be able to add the admin to the page for you, please copy the below into your case along with confirmation email from client requesting to be added as an admin";
+	document.getElementById("answerline2").innerHTML = "Please feel free to copy the below into a case";
+	document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to CP";
+	document.getElementById("level2-results-yes").innerHTML ="Member URL:";
+	document.getElementById("level3-results-yes").innerHTML ="Company page URL:";
+	document.getElementById("level4-results-yes").style.display="none";
 }
 
 function switch_fun(){
