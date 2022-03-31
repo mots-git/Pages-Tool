@@ -65,6 +65,7 @@ function add_results_Level2(o) {
 			document.getElementById("level2-results-yes").innerHTML = "Severity of change: Minor change";
 			document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
 			document.getElementById("level4-results-yes").innerHTML = "New Company name:";
+			document.getElementById("assets-copy-image-yes").style.marginTop = "110px";
 	}
 }
 function add_results_Level3(o) {
