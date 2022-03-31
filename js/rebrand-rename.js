@@ -6,6 +6,7 @@ var resultsLevel3Div=document.getElementById("level3");
 var level1Result = "";
 var level2Result = "";
 var level3Result = "";
+var level4Result = "";
 var changeResult = false;
 
 function copyFunction() {
@@ -25,13 +26,6 @@ function add_results_Level1(o) {
 function add_results_Level2(o) {
 	level2Result = o.innerHTML;
 	level3Result = o.innerHTML;
-	document.getElementById("level1-results-yes").innerHTML = "Number of Employees: " + level1Result;
-	document.getElementById("level2-results-yes").innerHTML = "Severity of Change: " + level2Result;
-	document.getElementById("level3-results-yes").innerHTML = "Age of Plan: " + level3Result;
-	document.getElementById("level1-results-no").innerHTML = "Number of Employees: " + level1Result;
-	document.getElementById("level2-results-no").innerHTML = "Severity of Change: " + level2Result;
-	document.getElementById("level3-results-no").innerHTML = "Page URL the client wishes to rebrand/rename: ";
-	console.log("true results" + level1Result + level2Result + level3Result)
 	
 	if(level1Result.includes("More than 500") &&
 		level2Result.includes("Significant change")){
@@ -42,6 +36,10 @@ function add_results_Level2(o) {
 			document.getElementById("level1-results-no").innerHTML = "Number of employees: More than 500";
 			document.getElementById("level2-results-no").innerHTML = "Severity of change: Significant change";
 			document.getElementById("level3-results-no").innerHTML = "Page URL the client wishes to rebrand:";
+			level1Result = document.getElementById("level1-results-no").innerHTML;
+			level2Result = document.getElementById("level2-results-no").innerHTML;
+			level3Result = document.getElementById("level3-results-no").innerHTML;
+			level4Result = document.getElementById("level4-results-no").innerHTML;
 	}
 	else if(level1Result.includes("More than 500") &&
 		level2Result.includes("Minor change")){
@@ -54,6 +52,10 @@ function add_results_Level2(o) {
 			document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
 			document.getElementById("level4-results-yes").innerHTML = "New Company name:";
 			document.getElementById("assets-copy-image-yes").style.marginTop = "108px";
+			level1Result = document.getElementById("level1-results-yes").innerHTML;
+			level2Result = document.getElementById("level2-results-yes").innerHTML;
+			level3Result = document.getElementById("level3-results-yes").innerHTML;
+			level4Result = document.getElementById("level4-results-yes").innerHTML;
 			
 	}
 	else if(level1Result.includes("Less than 500")){
@@ -66,6 +68,10 @@ function add_results_Level2(o) {
 			document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
 			document.getElementById("level4-results-yes").innerHTML = "New Company name:";
 			document.getElementById("assets-copy-image-yes").style.marginTop = "110px";
+			level1Result = document.getElementById("level1-results-yes").innerHTML;
+			level2Result = document.getElementById("level2-results-yes").innerHTML;
+			level3Result = document.getElementById("level3-results-yes").innerHTML;
+			level4Result = document.getElementById("level4-results-yes").innerHTML;
 	}
 }
 function add_results_Level3(o) {
@@ -83,6 +89,10 @@ function LessThan500(){
 	document.getElementById("level2-results-yes").innerHTML = "Severity of change: Minor change";
 	document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
 	document.getElementById("level4-results-yes").innerHTML = "New Company name:";
+	level1Result = document.getElementById("level1-results-yes").innerHTML;
+	level2Result = document.getElementById("level2-results-yes").innerHTML;
+	level3Result = document.getElementById("level3-results-yes").innerHTML;
+	level4Result = document.getElementById("level4-results-yes").innerHTML;
 }
 
 function switch_fun(){
@@ -128,9 +138,10 @@ let saveFile = () => {
         // This variable stores all the data.
         let data = 
 			'Request Type: Rebrand' + ' \r\n ' + 
-            'Number of Employees: ' + level1Result + ' \r\n ' + 
-            'Severity of Change: ' +level2Result + ' \r\n ' + 
-            'Page URL the client wishes to rebrand/rename: ';
+            level1Result + ' \r\n ' + 
+            level2Result + ' \r\n ' + 
+            level3Result + ' \r\n ' + 
+            level4Result;
         
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });
@@ -151,7 +162,7 @@ let saveFile = () => {
         newLink.click();
 
 		/* Get the text field */
-		var resultsText = level1Result + " " + level2Result + " " + level3Result;
+		var resultsText = 'Request Type: Rebrand ' + level1Result + " " + level2Result + " " + level3Result + " " + level4Result;
 		  
 		   /* Copy the text inside the text field */
 		  navigator.clipboard.writeText(resultsText);

@@ -38,6 +38,7 @@ function add_results_Level1(o) {
 		document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
+		level3Result = document.getElementById("level3-results-yes").innerHTML;
 	}
 	else if(level1Result.includes("No") && level==1){
 		level=2;	
@@ -62,6 +63,7 @@ function add_results_Level1(o) {
 		document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
+		level3Result = document.getElementById("level3-results-yes").innerHTML;
 	}
 	else if(level1Result.includes("No") && level==3 && questionText==="Does the page to be merged have more than 1 employee?"){
 		console.log("finished");
@@ -72,6 +74,7 @@ function add_results_Level1(o) {
 		document.getElementById("assets-copy-image-no").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-no").innerHTML;
 		level2Result = document.getElementById("level2-results-no").innerHTML;
+		level3Result = document.getElementById("level3-results-no").innerHTML;
 	}
 	else if(level1Result.includes("Yes") && level==3 && questionText==="Do both CP's have more than 100 employees?"){
 		console.log("finished");
@@ -82,6 +85,7 @@ function add_results_Level1(o) {
 		document.getElementById("assets-copy-image-no").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-no").innerHTML;
 		level2Result = document.getElementById("level2-results-no").innerHTML;
+		level3Result = document.getElementById("level3-results-no").innerHTML;
 	}
 	else if(level1Result.includes("No") && level==3 && questionText==="Do both CP's have more than 100 employees?"){
 		level=4;
@@ -97,6 +101,7 @@ function add_results_Level1(o) {
 		document.getElementById("assets-copy-image-no").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-no").innerHTML;
 		level2Result = document.getElementById("level2-results-no").innerHTML;
+		level3Result = document.getElementById("level3-results-no").innerHTML;
 	}
 	else if(level1Result.includes("No") && level==4 && questionText==="Does 1 of the CP's have more than 100 employees?"){
 		level=5;
@@ -109,16 +114,18 @@ function add_results_Level1(o) {
 		document.getElementById("level3-results-yes").style.display = "none";
 		document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
-		level2Result = document.getElementById("level2-results-yes").innerHTML;		
+		level2Result = document.getElementById("level2-results-yes").innerHTML;	
+		level3Result = document.getElementById("level3-results-yes").innerHTML;
 	}
 }
 
 let saveFile = () => {
         // This variable stores all the data.
         let data = 
-			'Request Type: Consolidation/Merge' + ' \r\n ' + 
-            'Result: ' + level1Result + ' \r\n ' + 
-            'Reference: ' + level2Result;
+			"Request Type: Consolidation/Merge" + ' \r\n ' + 
+			level1Result + ' \r\n ' + 
+            level2Result + ' \r\n ' +
+            level3Result;
         
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });
@@ -139,7 +146,7 @@ let saveFile = () => {
         newLink.click();
 
 		/* Get the text field */
-		var resultsText = level1Result + " " + level2Result;
+		var resultsText = "Request Type: Consolidation/Merge " + level1Result + " " + level2Result + " " + level3Result;
 		  
 		   /* Copy the text inside the text field */
 		  navigator.clipboard.writeText(resultsText);

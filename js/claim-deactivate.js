@@ -4,6 +4,8 @@ var resultsLevel1Div=document.getElementById("level1");
 var resultsLevel2Div=document.getElementById("level2");
 var level1Result = "";
 var level2Result = "";
+var level3Result = "";
+var level4Result = "";
 var changeResult = false;
 
 function add_results_Level1(o) {
@@ -21,6 +23,10 @@ function add_results_Level1(o) {
 		document.getElementById("answerline2").innerHTML = "If this doesn't help please copy the following and open a case";
 		document.getElementById("lvl_2").style.display="none";
 		document.getElementById("assets-copy-image-yes").style.marginTop="78px";
+		level1Result = document.getElementById("level1-results-yes").innerHTML;
+		level2Result = document.getElementById("level2-results-yes").innerHTML;
+		level3Result = document.getElementById("level3-results-yes").innerHTML;
+		level4Result = document.getElementById("level4-results-yes").innerHTML;
 	}
 }
 function add_results_Level2(o) {
@@ -33,6 +39,10 @@ function add_results_Level2(o) {
 			document.getElementById("lvl_results_no").style.display="block";
 			document.getElementById("answerline1").innerHTML = "We cannot deactivate this page as there are more than 100 employees associated to it";
 			document.getElementById("assets-copy-image-no").style.marginTop="18px";
+			level1Result = document.getElementById("level1-results-no").innerHTML;
+			level2Result = document.getElementById("level2-results-no").innerHTML;
+			level3Result = document.getElementById("level3-results-no").innerHTML;
+			level4Result = document.getElementById("level4-results-no").innerHTML;
 		}
 		else if(level2Result.includes("Less than 100")){
 			document.getElementById("answerline1").innerHTML = "Based on your inputs you should be able to deactivate the page via self service";
@@ -45,6 +55,10 @@ function add_results_Level2(o) {
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
 			document.getElementById("assets-copy-image-yes").style.marginTop="48px";
+			level1Result = document.getElementById("level1-results-yes").innerHTML;
+			level2Result = document.getElementById("level2-results-yes").innerHTML;
+			level3Result = document.getElementById("level3-results-yes").innerHTML;
+			level4Result = document.getElementById("level4-results-yes").innerHTML;
 		}
 	}
 }
@@ -61,6 +75,10 @@ function redirectAddAdmin(){
 	document.getElementById("level3-results-yes").innerHTML ="Company page URL:";
 	document.getElementById("level4-results-yes").style.display="none";
 	document.getElementById("assets-copy-image-yes").style.marginTop="48px";
+	level1Result = document.getElementById("level1-results-yes").innerHTML;
+	level2Result = document.getElementById("level2-results-yes").innerHTML;
+	level3Result = document.getElementById("level3-results-yes").innerHTML;
+	level4Result = document.getElementById("level4-results-yes").innerHTML;
 }
 
 function switch_fun(){
@@ -118,30 +136,13 @@ let saveFile = () => {
         // This variable stores all the data.
 		let data;
 		var solution;
-		
-		if(level1Result.includes("Claim")){
-			data = 
-				'Request Type: Claim' + ' \r\n ' + 
-				'Solution: ' + "Self Service";
-				solution = "Self Service";
-		}
-		else if(level1Result.includes("Deactivate")){
-			if(level2Result.includes("More than 100")){
-				data = 
-					'Request Type: Deactivate' + ' \r\n ' + 
-					'Number of Employees: ' + level2Result + ' \r\n ' + 
-					'Solution: ' + "Not possible please see documentation";
-					solution = "Not possible please see documentation";
-			}
-			else{
-				data = 
-					'Request Type: Deactivate' + ' \r\n ' +
-					'Number of Employees: ' + level2Result + ' \r\n ' + 					
-					'Solution: ' + "Self Service";
-					solution = "Self Service";
-			}
-		}
-        
+
+		data = 
+				level1Result + ' \r\n ' + 
+				level2Result + ' \r\n ' + 
+				level3Result + ' \r\n ' + 
+				level4Result;
+
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });
         const sFileName = 'CaseData.txt';	   // The file to save the data.
@@ -161,7 +162,7 @@ let saveFile = () => {
         newLink.click();
 
 		/* Get the text field */
-		var resultsText = level1Result + " " + level2Result + solution;
+		var resultsText = level1Result + " " + level2Result + " " + level3Result + " " + " " + level4Result;
 		  
 		   /* Copy the text inside the text field */
 		  navigator.clipboard.writeText(resultsText);

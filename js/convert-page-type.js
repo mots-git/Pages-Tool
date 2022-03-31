@@ -126,7 +126,7 @@ let saveFile = () => {
 	newLink.click();
 
 	/* Get the text field */
-	var resultsText = document.getElementById("level1-results-yes").innerHTML + " " + document.getElementById("level1-results-yes").innerHTML;
+	var resultsText = 'Request Type: Convert Page Type ' + document.getElementById("level1-results-yes").innerHTML + " " + document.getElementById("level2-results-yes").innerHTML + " " + document.getElementById("level3-results-yes").innerHTML;
 
 	/* Copy the text inside the text field */
 	navigator.clipboard.writeText(resultsText);

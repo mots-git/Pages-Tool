@@ -45,8 +45,8 @@ let saveFile = () => {
 		
         let data = 
 			'Request Type: Migrate Followers' + ' \r\n ' + 
-            'Result: ' + level1Result + ' \r\n ' + 
-            'Reference: ' + level2Result;
+            level1Result + ' \r\n ' + 
+            level2Result;
         
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });
@@ -67,7 +67,7 @@ let saveFile = () => {
         newLink.click();
 
 		/* Get the text field */
-		var resultsText = level1Result + " " + level2Result;
+		var resultsText = "Request Type: Migrate Followers " + level1Result + " " + level2Result;
 		  
 		   /* Copy the text inside the text field */
 		  navigator.clipboard.writeText(resultsText);
