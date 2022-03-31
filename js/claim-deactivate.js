@@ -20,7 +20,7 @@ function add_results_Level1(o) {
 		document.getElementById("answerline1").style.display="none";
 		document.getElementById("answerline2").innerHTML = "If this doesn't help please copy the following and open a case";
 		document.getElementById("lvl_2").style.display="none";
-		document.getElementById("assets-copy-image-yes").style.marginTop="18px";
+		document.getElementById("assets-copy-image-yes").style.marginTop="78px";
 	}
 }
 function add_results_Level2(o) {
@@ -32,14 +32,18 @@ function add_results_Level2(o) {
 			document.getElementById("lvl_results_yes").style.display="none";
 			document.getElementById("lvl_results_no").style.display="block";
 			document.getElementById("answerline1").innerHTML = "We cannot deactivate this page as there are more than 100 employees associated to it";
-			document.getElementById("assets-copy-image-no").style.marginTop="48px";
+			document.getElementById("assets-copy-image-no").style.marginTop="18px";
 		}
 		else if(level2Result.includes("Less than 100")){
+			document.getElementById("answerline1").innerHTML = "Based on your inputs you should be able to deactivate the page via self service";
+			document.getElementById("answerline2").innerHTML = "Please feel free to copy the below into a case if you have further queries";
+			document.getElementById("answerline3").style.display="block";
 			document.getElementById("level1-results-yes").innerHTML = "Employees: " + level2Result;
 			document.getElementById("level2-results-yes").innerHTML = "Solution: " + "Self Service";
+			document.getElementById("level3-results-yes").style.display="none";
+			document.getElementById("level4-results-yes").style.display="none";
 			document.getElementById("lvl_results_no").style.display="none";
 			document.getElementById("lvl_results_yes").style.display="block";
-			document.getElementById("resultReason-yes").innerHTML = "Self Service Solution";
 			document.getElementById("assets-copy-image-yes").style.marginTop="48px";
 		}
 	}
@@ -55,6 +59,7 @@ function redirectAddAdmin(){
 	document.getElementById("level2-results-yes").innerHTML ="Member URL:";
 	document.getElementById("level3-results-yes").innerHTML ="Company page URL:";
 	document.getElementById("level4-results-yes").style.display="none";
+	document.getElementById("assets-copy-image-yes").style.marginTop="48px";
 }
 
 function switch_fun(){

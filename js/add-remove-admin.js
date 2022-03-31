@@ -71,7 +71,7 @@ function add_results_Level1(o) {
 		document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to CP";
 		document.getElementById("level2-results-yes").innerHTML = "Member URL:";
 		document.getElementById("level3-results-yes").innerHTML = "Company Page URL:";
-		document.getElementById("assets-copy-image-yes").style.marginTop = "88px";
+		document.getElementById("assets-copy-image-yes").style.marginTop = "48px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
 	}
@@ -85,7 +85,7 @@ function add_results_Level1(o) {
 		document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to CP";
 		document.getElementById("level2-results-yes").innerHTML = "Member URL:";
 		document.getElementById("level3-results-yes").innerHTML = "Company Page URL:";
-		document.getElementById("assets-copy-image-yes").style.marginTop = "68px";
+		document.getElementById("assets-copy-image-yes").style.marginTop = "48px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
 	}

@@ -31,7 +31,7 @@ function CompanyToUniversity() {
 	document.getElementById("level1-results-yes").innerHTML = "Type of Change: Company to University";
 	document.getElementById("level2-results-yes").innerHTML = "Company page URL:";
 	document.getElementById("level3-results-yes").style.display = "none";
-	document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
+	document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 
 }
 
@@ -46,7 +46,7 @@ function ShowcaseToCompany() {
 	document.getElementById("level1-results-yes").innerHTML = "Type of Change: Showcase to Company";
 	document.getElementById("level2-results-yes").innerHTML = "Company page URL:";
 	document.getElementById("level3-results-yes").style.display = "none";
-	document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
+	document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 
 }
 
@@ -61,7 +61,7 @@ function ShowcaseToUniversity() {
 	document.getElementById("level1-results-yes").innerHTML = "Type of Change: Showcase to University";
 	document.getElementById("level2-results-yes").innerHTML = "Company page URL:";
 	document.getElementById("level3-results-yes").style.display = "none";
-	document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
+	document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 
 }
 
@@ -76,7 +76,7 @@ function UniversityToCompany() {
 	document.getElementById("level1-results-yes").innerHTML = "Type of Change: University to Company";
 	document.getElementById("level2-results-yes").innerHTML = "Company page URL:";
 	document.getElementById("level3-results-yes").style.display = "none";
-	document.getElementById("assets-copy-image-yes").style.marginTop = "79px";
+	document.getElementById("assets-copy-image-yes").style.marginTop = "49px";
 
 }
 
