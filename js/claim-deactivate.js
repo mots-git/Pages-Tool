@@ -55,6 +55,7 @@ function redirectAddAdmin(){
 	document.getElementById("answerline1").style.display="block";
 	document.getElementById("answerline1").innerHTML = "Based on your inputs we should be able to add the admin to the page for you, please copy the below into your case along with confirmation email from client requesting to be added as an admin";
 	document.getElementById("answerline2").innerHTML = "Please feel free to copy the below into a case";
+	document.getElementById("boxTitle").innerHTML = "Add Admin";
 	document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to CP";
 	document.getElementById("level2-results-yes").innerHTML ="Member URL:";
 	document.getElementById("level3-results-yes").innerHTML ="Company page URL:";
