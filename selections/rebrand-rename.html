@@ -60,11 +60,18 @@
                   <img src="../assets/InformationIcon.png" style="margin-bottom: 80px; width: 30px;" />
                   <span class="tooltiptext">e.g. Adding to/removing small changes (The box company -> Box company)</span>
                </div>
-               
-               
-               
             </div>
          </div>
+         <div id="lvl_3">
+               <h4 id="q3">Is the page name changing as a result of an acquisition?</h4>
+               <div id="back" class="col-md-3">
+                  <div onclick="location.href='../index.html';"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
+               </div>
+               <div id="options">
+                  <button class="well" id="level1" onclick="AcquisitionYes()" style="padding-top: 25px!important;"> Yes </button>
+                  <button class="well" id="level1" onclick="AcquisitionNo()" style="padding-top: 25px!important;"> No </button>
+               </div>
+            </div> 
          <div id="lvl_results_yes">
             <div class="row">
                <div class="col-md-3 col-md-offset-2">
@@ -152,6 +159,7 @@
          $(document).ready(function() {          
 			 document.getElementById("lvl_1").style.display="block";
 			 document.getElementById("lvl_2").style.display="none";
+          document.getElementById("lvl_3").style.display="none";
 			 //document.getElementById("lvl_3").style.display="none";
 			 document.getElementById("lvl_results_yes").style.display="none";
 			 document.getElementById("lvl_results_no").style.display="none";         

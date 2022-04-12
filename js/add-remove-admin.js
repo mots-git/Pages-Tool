@@ -66,10 +66,10 @@ function add_results_Level1(o) {
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_yes").style.display = "block";
 		document.getElementById("answerline1").innerHTML = "We need more information to process this request";
-		document.getElementById("resultReason-yes").innerHTML = "Please copy the below along with any correspondence from the client requesting access to the company page into a case";
-		document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to CP";
+		document.getElementById("resultReason-yes").innerHTML = "Please copy the below along with any correspondence from the client requesting access to the Page into a case";
+		document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to Page";
 		document.getElementById("level2-results-yes").innerHTML = "Member URL:";
-		document.getElementById("level3-results-yes").innerHTML = "Company Page URL:";
+		document.getElementById("level3-results-yes").innerHTML = "Page URL:";
 		document.getElementById("assets-copy-image-yes").style.marginTop = "48px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;
@@ -82,9 +82,9 @@ function add_results_Level1(o) {
 		document.getElementById("lvl_1").style.display = "none";
 		document.getElementById("lvl_results_yes").style.display = "block";
 		document.getElementById("answerline1").innerHTML = "Based on your inputs we should be able to add the admin to the page for you, please copy the below into your case along with confirmation email from client requesting to be added as an admin";
-		document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to CP";
+		document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to Page";
 		document.getElementById("level2-results-yes").innerHTML = "Member URL:";
-		document.getElementById("level3-results-yes").innerHTML = "Company Page URL:";
+		document.getElementById("level3-results-yes").innerHTML = "Page URL:";
 		document.getElementById("assets-copy-image-yes").style.marginTop = "48px";
 		level1Result = document.getElementById("level1-results-yes").innerHTML;
 		level2Result = document.getElementById("level2-results-yes").innerHTML;

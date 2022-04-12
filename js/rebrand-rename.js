@@ -20,6 +20,38 @@ function copyFunction() {
   alert("Copied text: " + copyText);
 }
 
+function AcquisitionYes(){
+	document.getElementById("lvl_3").style.display="none";
+	document.getElementById("lvl_results_no").style.display="block";
+	document.getElementById("lvl_results_yes").style.display="none";
+	document.getElementById("answerline1").innerHTML = "Based on your inputs it is unlikely that we can process this Rebrand, however please continue to open a case and copy the following into it";
+	document.getElementById("answerline2").innerHTML = "However please continue to open a case and copy the following into it";
+	document.getElementById("level1-results-no").innerHTML = "Number of employees: More than 500";
+	document.getElementById("level2-results-no").innerHTML = "Severity of change: Significant change";
+	document.getElementById("level3-results-no").innerHTML = "Page URL the client wishes to rebrand:";
+	level1Result = document.getElementById("level1-results-no").innerHTML;
+	level2Result = document.getElementById("level2-results-no").innerHTML;
+	level3Result = document.getElementById("level3-results-no").innerHTML;
+	level4Result = document.getElementById("level4-results-no").innerHTML;
+}
+
+function AcquisitionNo(){
+	document.getElementById("lvl_3").style.display="none";
+	document.getElementById("lvl_results_no").style.display="none";
+	document.getElementById("lvl_results_yes").style.display="block";
+	document.getElementById("answerline1").innerHTML = "Based on your inputs we should be able to process this request";
+	document.getElementById("answerline2").innerHTML = "Please continue to open a case and copy the following into it";
+	document.getElementById("level1-results-yes").innerHTML = "Number of employees: More than 500";
+	document.getElementById("level2-results-yes").innerHTML = "Severity of change: Minor change";
+	document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
+	document.getElementById("level4-results-yes").innerHTML = "New Company name:";
+	document.getElementById("assets-copy-image-yes").style.marginTop = "108px";
+	level1Result = document.getElementById("level1-results-yes").innerHTML;
+	level2Result = document.getElementById("level2-results-yes").innerHTML;
+	level3Result = document.getElementById("level3-results-yes").innerHTML;
+	level4Result = document.getElementById("level4-results-yes").innerHTML;
+}
+
 function add_results_Level1(o) {
 	level1Result = o.innerHTML;
 }
@@ -43,19 +75,7 @@ function add_results_Level2(o) {
 	}
 	else if(level1Result.includes("More than 500") &&
 		level2Result.includes("Minor change")){
-			document.getElementById("lvl_results_no").style.display="none";
-			document.getElementById("lvl_results_yes").style.display="block";
-			document.getElementById("answerline1").innerHTML = "Based on your inputs we should be able to process this request";
-			document.getElementById("answerline2").innerHTML = "Please continue to open a case and copy the following into it";
-			document.getElementById("level1-results-yes").innerHTML = "Number of employees: More than 500";
-			document.getElementById("level2-results-yes").innerHTML = "Severity of change: Minor change";
-			document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
-			document.getElementById("level4-results-yes").innerHTML = "New Company name:";
-			document.getElementById("assets-copy-image-yes").style.marginTop = "108px";
-			level1Result = document.getElementById("level1-results-yes").innerHTML;
-			level2Result = document.getElementById("level2-results-yes").innerHTML;
-			level3Result = document.getElementById("level3-results-yes").innerHTML;
-			level4Result = document.getElementById("level4-results-yes").innerHTML;
+			document.getElementById("lvl_3").style.display="block";
 			
 	}
 	else if(level1Result.includes("Less than 500")){

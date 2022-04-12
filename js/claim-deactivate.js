@@ -12,7 +12,7 @@ function add_results_Level1(o) {
 	level1Result = o.innerHTML;
 	if(level1Result.includes("Claim")){
 		document.getElementById("level1-results-yes").innerHTML = "Request Type: Claim";
-		document.getElementById("level2-results-yes").innerHTML ="Company page URL:";
+		document.getElementById("level2-results-yes").innerHTML ="Page URL:";
 		document.getElementById("level3-results-yes").innerHTML = "Member URL that wished to be admin:";
 		document.getElementById("level4-results-yes").innerHTML="Page Claim request date (If applicable): ";		
 		document.getElementById("lvl_results_no").style.display="none";
@@ -70,9 +70,9 @@ function redirectAddAdmin(){
 	document.getElementById("answerline1").innerHTML = "Based on your inputs we should be able to add the admin to the page for you, please copy the below into your case along with confirmation email from client requesting to be added as an admin";
 	document.getElementById("answerline2").innerHTML = "Please feel free to copy the below into a case";
 	document.getElementById("boxTitle").innerHTML = "Add Admin";
-	document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to CP";
+	document.getElementById("level1-results-yes").innerHTML = "Request Type: Add Admin to Page";
 	document.getElementById("level2-results-yes").innerHTML ="Member URL:";
-	document.getElementById("level3-results-yes").innerHTML ="Company page URL:";
+	document.getElementById("level3-results-yes").innerHTML ="Page URL:";
 	document.getElementById("level4-results-yes").style.display="none";
 	document.getElementById("assets-copy-image-yes").style.marginTop="48px";
 	level1Result = document.getElementById("level1-results-yes").innerHTML;

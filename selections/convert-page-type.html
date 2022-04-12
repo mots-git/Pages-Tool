@@ -36,7 +36,7 @@
 			 <div class="row">
 				 <div class="col-md-6 col-md-offset-3">
 					 <div class="textBody" id="descriptionText">
-						<h4>Which scenario best describes your conversion type</h4>
+						<h4 id="headerTitle">Which scenario best describes your conversion type</h4>
 					 </div> 
 				 </div>
 			 </div>
@@ -65,6 +65,16 @@
 				   </div>
 				</div>
 			</div>
+			<div id="lvl_1" style="display: none;">
+            <h4 id="q1">Is this change due to an acquisition or a subsidiary?</h4>
+            <div id="back" class="col-md-3">
+               <div onclick="location.href='../index.html';"><img class="arrowImage" src="../assets/BackButton.png" style="margin-top: 30px;"/></div>
+            </div>
+            <div id="options">
+               <button class="well" id="level1" onclick="AquisitionYes()" style="padding-top: 25px!important;"> Yes </button>
+               <button class="well" id="level1" onclick="AquisitionNo()" style="padding-top: 25px!important;"> No </button>
+            </div>
+         </div>
 			<div id="lvl_results_yes">
 				<div class="row">
 				   <div class="col-md-3 col-md-offset-2">
@@ -106,6 +116,43 @@
                </div>
             </div>
 			 </div>
+			 <div id="lvl_results_no">
+            <div class="row">
+				   <div class="col-md-3 col-md-offset-2">
+					  <img src="../assets/Line_Icon.png" id="resultsImage" />
+				   </div>
+				   <div class="col-md-3" id="displayText">
+					  <h4>It is unlinkely that we will be able to process this change.</h4>
+					  <h4 id = "resultReason-no">Please provide the following when opening a ticket</h4>
+					  <ul>
+					  		<li id="bullet1-no" style="text-align: left;font-size: 18px;"></li>
+					  		<li id="bullet1-company-showcase-no" style="text-align: left;font-size: 18px; display: none;">A completed copy of this <a href="https://drive.google.com/file/d/1NuBNFTFo2EAmjHkzOZ8gwNJaC4Rrrayr/view" style="text-decoration: underline;">form</a></li>
+					  		<li id="bullet2-no" style="text-align: left;font-size: 18px;"></li>
+					  </ul>
+				   </div>
+				</div>
+				<div class="row">
+				   <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+					  <p>Request Type: Convert Page Type</p>
+					  <p id="level1-results-no"></p>
+					  <p id="level2-results-no"></p>
+					  <p id="level3-results-no"></p>
+				   </div>
+				   <div class="col-md-3 col-md-offset-4">
+					  <div class = "arrowImage" onclick="saveFile()"><img src="../assets/copy_paste.png" id="assets-copy-image-no"/></div>
+				   </div>
+				</div>
+				<div class="row">
+              <div class="float-container-buttons">
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/CP-PRIMARY')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+              </div>
+               </div>
+            </div>
+         </div>
 			 <div class="row">
 				<div class="col-md-9">
 				   <div onclick="location.href='../index.html';"><img class="arrowImage" src="../assets/Return_Icon.png" style="float:right"/></div>
