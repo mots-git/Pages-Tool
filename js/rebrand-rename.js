@@ -27,8 +27,8 @@ function AcquisitionYes(){
 	document.getElementById("answerline1").innerHTML = "Based on your inputs it is unlikely that we can process this Rebrand, however please continue to open a case and copy the following into it";
 	document.getElementById("answerline2").innerHTML = "However please continue to open a case and copy the following into it";
 	document.getElementById("level1-results-no").innerHTML = "Number of employees: More than 500";
-	document.getElementById("level2-results-no").innerHTML = "Severity of change: Significant change";
-	document.getElementById("level3-results-no").innerHTML = "Page URL the client wishes to rebrand:";
+	document.getElementById("level2-results-no").innerHTML = "Severity of change: Minor change";
+	document.getElementById("level3-results-no").innerHTML = "Acquisition yes and Page URL the client wishes to rebrand:";
 	level1Result = document.getElementById("level1-results-no").innerHTML;
 	level2Result = document.getElementById("level2-results-no").innerHTML;
 	level3Result = document.getElementById("level3-results-no").innerHTML;
@@ -44,7 +44,7 @@ function AcquisitionNo(){
 	document.getElementById("level1-results-yes").innerHTML = "Number of employees: More than 500";
 	document.getElementById("level2-results-yes").innerHTML = "Severity of change: Minor change";
 	document.getElementById("level3-results-yes").innerHTML = "Page URL the client wishes to rebrand:";
-	document.getElementById("level4-results-yes").innerHTML = "New Company name:";
+	document.getElementById("level4-results-yes").innerHTML = "Acquisition no and New Company name:";
 	document.getElementById("assets-copy-image-yes").style.marginTop = "108px";
 	level1Result = document.getElementById("level1-results-yes").innerHTML;
 	level2Result = document.getElementById("level2-results-yes").innerHTML;
