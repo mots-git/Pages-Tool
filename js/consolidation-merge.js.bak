@@ -26,7 +26,7 @@ function add_results_Level1(o) {
 		document.getElementById("resultsImage").style.display = "none";
 		document.getElementById("resultReason-yes2").style.display = "none";
 		//document.getElementById("boxTitle").innerHTML = "Acquisition / Affiliation";
-		document.getElementById("redirect1").innerHTML = "As one or more of the pages involved are acquired we cannot merge/consolidate(Unless the acquisition was over 5 years ago). If the acquisition was over 5 years ago we can offer a follower migration, however each employee will have to move their employment to the new company page themself.";
+		document.getElementById("redirect1").innerHTML = "As one or more of the pages involved are acquired we cannot merge/consolidate(Unless the acquisition was over 10 years ago).";
 		document.getElementById("redirect2").innerHTML = "Instead we can offer to affiliate these pages, selecting one as a Parent and the other as a child page.";
 		document.getElementById("redirect3").innerHTML = "We can also offer to add an acquisition banner to the child page that will redirect to the parent page.";
 		document.getElementById("lvl_results_yes").style.display = "block";
